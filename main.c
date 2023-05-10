@@ -13,8 +13,13 @@ int main() {
     int nrEchipe;
     fscanf(in, "%d ", &nrEchipe);
     TEAMLIST *teams = NULL;
-
-    teams = initTeams(in);
+    teams = malloc(sizeof(TEAMLIST));
+    teams->teamHead = malloc(sizeof(TEAM));
+    teams->teamHead = initTeams(in);
+    displayTeam(teams->teamHead);
+    free(teams->teamHead->members->playerHead);
+    free(teams->teamHead->members);
+    free(teams->teamHead);
     free(teams);
     return 0;
 }

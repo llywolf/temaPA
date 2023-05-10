@@ -12,11 +12,15 @@ typedef struct Player
     struct Player *next;
 }PLAYER;
 
+typedef struct PlayerList{
+    PLAYER* playerHead;
+}PLAYERLIST;
+
 typedef struct Team{
     char* name;
     int points;
     int nrMembers;
-    PLAYER* members;
+    PLAYERLIST* members;
     struct Team* next;
 }TEAM;
 
@@ -24,7 +28,7 @@ typedef struct TeamList{
     TEAM* teamHead;
 }TEAMLIST;
 
-void addTeamBeginning(TEAM **head, char* teamName, int teamPoints, int teamMembers);
+void addTeamBeginning(TEAM **head, char* teamName, int teamMembers, PLAYER *players);
 void addPlayerBeginning(PLAYER **head, char* playerFirstName, char* playerSecondName, int playerPoints);
 void displayTeam(TEAM *head);
 void displayPlayers(PLAYER *head);

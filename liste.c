@@ -1,18 +1,28 @@
 #include "liste.h"
 
-void addTeamBeginning(TEAM **head, char *teamName, int teamPoints, int teamMembers) {
+void addTeamBeginning(TEAM **head, char *teamName, int teamMembers, PLAYER* players) {
     TEAM *newTeam = (TEAM *) malloc(sizeof(TEAM));
-    strcpy(newTeam->name, teamName);
+    int nameLen = strlen(teamName);
+    newTeam->name = malloc((nameLen + 1) * sizeof(char));
+    memcpy(newTeam->name, teamName, nameLen);
+    newTeam->name[nameLen] = '\0';
     newTeam->nrMembers = teamMembers;
-    newTeam->points = teamPoints;
     newTeam->next = *head;
     *head = newTeam;
+    newTeam->members = malloc(sizeof(PLAYERLIST));
+    newTeam->members->playerHead = malloc(sizeof(PLAYER));
+    newTeam->members->playerHead = players;
 }
 
 void addPlayerBeginning(PLAYER **head, char *playerFirstName, char *playerSecondName, int playerPoints) {
     PLAYER *newPlayer = malloc(sizeof(PLAYER));
-    strcpy(newPlayer->firstName, playerFirstName);
-    strcpy(newPlayer->secondName, playerSecondName);
+    int lenFname = strlen(playerFirstName), lenSname = strlen(playerSecondName);
+    newPlayer->firstName = malloc(sizeof(char) * (lenFname + 1));
+    newPlayer->secondName = malloc(sizeof(char) * (lenSname + 1));
+    memcpy(newPlayer->firstName, playerFirstName, lenFname);
+    memcpy(newPlayer->secondName, playerSecondName, lenSname);
+    newPlayer->firstName[lenFname] = '\0';
+    newPlayer->secondName[lenSname] = '\0';
     newPlayer->points = playerPoints;
     newPlayer->next = *head;
     *head = newPlayer;
@@ -21,7 +31,9 @@ void addPlayerBeginning(PLAYER **head, char *playerFirstName, char *playerSecond
 void displayTeam(TEAM *head) {
     while (head != NULL) {
         printf("\n%s-%d-%d", head->name, head->points, head->nrMembers);
-        displayPlayers(head->members);
+        printf("\n");
+        displayPlayers(head->members->playerHead);
+        printf("\n--------------------------------------------");
         head = head->next;
     }
 }
@@ -35,6 +47,7 @@ void displayPlayers(PLAYER *head) {
 
 TEAM *initTeams(FILE *in) {
     TEAM* team = NULL;
+    PLAYER* players = NULL;
     char buffer[100], *endPtr = NULL, *name = NULL;
     int len, num;       //initial num e nr membrii echipa
     while (!feof(in)) {
@@ -45,31 +58,38 @@ TEAM *initTeams(FILE *in) {
             num = strtol(buffer, &endPtr, 10);
             len = strlen(endPtr);       //endPtr o sa fie numele echipei(din cauza lui strtol)
             buffer[len - 1] = '\0';
-            name = malloc((len + 1) * sizeof(char));        // len+1 pt '\0'
-            memcpy(name, endPtr + 1, len * sizeof(char));
-            name[len - 1] = '\0';
-
-            printf("\n%s", name);
-            free(name);
-        } else {        // cazul pt inregistrarea membrilor
-            len = strlen(buffer);   //scorul, buffer[len-1] = '\n'
-            buffer[len - 1] = '\0';
-            num = 0;
-            for (int i = 0; buffer[i] != '\0'; i++)
-                if (buffer[i] <= '9' && buffer[i] >= '0')
-                    num = num * 10 + buffer[i] - '0';
-            int newLen = len - 3; // pt nume
-            if (num > 9) {      // difera dimensiunea in functie nr de cifre al lui num
-                name = malloc((len - 1) * sizeof(char));
-                memcpy(name, buffer, sizeof(char) * (newLen + 1));
-                name[newLen - 2] = '\0';
-            } else {
-                name = malloc(len * sizeof(char));
-                memcpy(name, buffer, sizeof(char) * (newLen + 2));
-                name[newLen - 1] = '\0';
+            char* teamName = malloc((len + 1) * sizeof(char));        // len+1 pt '\0'
+            memcpy(teamName, endPtr + 1, len * sizeof(char));
+            teamName[len - 1] = '\0';
+            int nrMembrii = num;
+            for(int i = 0; i < nrMembrii; i++){
+                // cazul pt inregistrarea membrilor
+                fgets(buffer, sizeof(buffer), in);
+                len = strlen(buffer);   //scorul, buffer[len-1] = '\n'
+                buffer[len - 1] = '\0';
+                num = 0;
+                for (int j = 0; buffer[j] != '\0'; j++) {
+                    if (buffer[j] <= '9' && buffer[j] >= '0') {
+                        num = num * 10 + buffer[j] - '0';
+                    }
+                }
+                int newLen = len - 3; // pt nume
+                if (num > 9) {      // difera dimensiunea in functie nr de cifre al lui num
+                    name = malloc((len - 1) * sizeof(char));
+                    memcpy(name, buffer, sizeof(char) * (newLen + 1));
+                    name[newLen - 2] = '\0';
+                } else {
+                    name = malloc(len * sizeof(char));
+                    memcpy(name, buffer, sizeof(char) * (newLen + 2));
+                    name[newLen - 1] = '\0';
+                }
+                char tok = ' ';
+                addPlayerBeginning(&players, strsep(&name, &tok), strsep(&name, &tok), num);
+                free(name);
             }
-            printf("\n\t|%d|%s|", num, name);
-            free(name);
+            addTeamBeginning(&team, teamName, nrMembrii, players);
+            free(teamName);
+            players = NULL;
         }
     }
     return team;

@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named untitled6
+# Target rules for targets named tema1PA
 
 # Build rule for target.
-untitled6: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 untitled6
-.PHONY : untitled6
+tema1PA: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tema1PA
+.PHONY : tema1PA
 
 # fast build rule for target.
-untitled6/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled6.dir/build.make CMakeFiles/untitled6.dir/build
-.PHONY : untitled6/fast
+tema1PA/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tema1PA.dir/build.make CMakeFiles/tema1PA.dir/build
+.PHONY : tema1PA/fast
 
 liste.o: liste.c.o
 .PHONY : liste.o
 
 # target to build an object file
 liste.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled6.dir/build.make CMakeFiles/untitled6.dir/liste.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tema1PA.dir/build.make CMakeFiles/tema1PA.dir/liste.c.o
 .PHONY : liste.c.o
 
 liste.i: liste.c.i
@@ -142,7 +142,7 @@ liste.i: liste.c.i
 
 # target to preprocess a source file
 liste.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled6.dir/build.make CMakeFiles/untitled6.dir/liste.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tema1PA.dir/build.make CMakeFiles/tema1PA.dir/liste.c.i
 .PHONY : liste.c.i
 
 liste.s: liste.c.s
@@ -150,7 +150,7 @@ liste.s: liste.c.s
 
 # target to generate assembly for a file
 liste.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled6.dir/build.make CMakeFiles/untitled6.dir/liste.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tema1PA.dir/build.make CMakeFiles/tema1PA.dir/liste.c.s
 .PHONY : liste.c.s
 
 main.o: main.c.o
@@ -158,7 +158,7 @@ main.o: main.c.o
 
 # target to build an object file
 main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled6.dir/build.make CMakeFiles/untitled6.dir/main.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tema1PA.dir/build.make CMakeFiles/tema1PA.dir/main.c.o
 .PHONY : main.c.o
 
 main.i: main.c.i
@@ -166,7 +166,7 @@ main.i: main.c.i
 
 # target to preprocess a source file
 main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled6.dir/build.make CMakeFiles/untitled6.dir/main.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tema1PA.dir/build.make CMakeFiles/tema1PA.dir/main.c.i
 .PHONY : main.c.i
 
 main.s: main.c.s
@@ -174,7 +174,7 @@ main.s: main.c.s
 
 # target to generate assembly for a file
 main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled6.dir/build.make CMakeFiles/untitled6.dir/main.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tema1PA.dir/build.make CMakeFiles/tema1PA.dir/main.c.s
 .PHONY : main.c.s
 
 # Help Target
@@ -185,7 +185,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... untitled6"
+	@echo "... tema1PA"
 	@echo "... liste.o"
 	@echo "... liste.i"
 	@echo "... liste.s"

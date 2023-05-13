@@ -4,7 +4,6 @@ int main() {
     //deschidere fisiere
     FILE *in, *out;
     in = fopen("/mnt/c/Users/carag/CLionProjects/tema1PA/lan-party-02-checker-main/date/t1/d.in", "rt");
-    //folosesc wsl, nu am linux
     if (in == NULL) {
         fprintf(stderr, "\nEroare deschidere fisier date");
         exit(1);
@@ -21,8 +20,8 @@ int main() {
     TEAM* aux = NULL;
     //alocari de memorie
     teams = malloc(sizeof(TEAMLIST));
-    teams->teamHead = malloc(sizeof(TEAM));
     printf("ajung aici");
+    //------------------------------------TASK 1-------------------------------------
     teams->teamHead = initTeams(in);
     fseek(in, 0,0);
     aux = teams->teamHead;
@@ -31,10 +30,10 @@ int main() {
         aux = aux->next;
     }
     displayTeam(teams->teamHead);       //afisare
-    //eliberari de memorie
-    free(teams->teamHead->members->playerHead);
-    free(teams->teamHead->members);
-    free(teams->teamHead);
+    //eliberare de memorie
+    TEAM* toDelete = teams->teamHead;
+    deleteTeam(&toDelete);
+    toDelete = NULL;
     free(teams);
     //inchidere fisiere
     fclose(in);

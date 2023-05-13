@@ -1,1 +1,0 @@
-/usr/bin/cc -g CMakeFiles/untitled6.dir/main.c.o CMakeFiles/untitled6.dir/liste.c.o -o untitled6 

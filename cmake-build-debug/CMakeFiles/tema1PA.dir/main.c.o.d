@@ -1,4 +1,4 @@
-CMakeFiles/untitled6.dir/main.c.o: \
+CMakeFiles/tema1PA.dir/main.c.o: \
  /mnt/c/Users/carag/CLionProjects/tema1PA/main.c \
  /usr/include/stdc-predef.h \
  /mnt/c/Users/carag/CLionProjects/tema1PA/liste.h /usr/include/stdlib.h \

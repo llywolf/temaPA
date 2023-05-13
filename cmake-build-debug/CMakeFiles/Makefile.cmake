@@ -103,5 +103,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/untitled6.dir/DependInfo.cmake"
+  "CMakeFiles/tema1PA.dir/DependInfo.cmake"
   )

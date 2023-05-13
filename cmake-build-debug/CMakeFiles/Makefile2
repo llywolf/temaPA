@@ -63,7 +63,7 @@ CMAKE_BINARY_DIR = /mnt/c/Users/carag/CLionProjects/tema1PA/cmake-build-debug
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/untitled6.dir/all
+all: CMakeFiles/tema1PA.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -71,34 +71,34 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/untitled6.dir/clean
+clean: CMakeFiles/tema1PA.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/untitled6.dir
+# Target rules for target CMakeFiles/tema1PA.dir
 
 # All Build rule for target.
-CMakeFiles/untitled6.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled6.dir/build.make CMakeFiles/untitled6.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled6.dir/build.make CMakeFiles/untitled6.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/carag/CLionProjects/tema1PA/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target untitled6"
-.PHONY : CMakeFiles/untitled6.dir/all
+CMakeFiles/tema1PA.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tema1PA.dir/build.make CMakeFiles/tema1PA.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tema1PA.dir/build.make CMakeFiles/tema1PA.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/carag/CLionProjects/tema1PA/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target tema1PA"
+.PHONY : CMakeFiles/tema1PA.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/untitled6.dir/rule: cmake_check_build_system
+CMakeFiles/tema1PA.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/carag/CLionProjects/tema1PA/cmake-build-debug/CMakeFiles 3
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/untitled6.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/tema1PA.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/carag/CLionProjects/tema1PA/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/untitled6.dir/rule
+.PHONY : CMakeFiles/tema1PA.dir/rule
 
 # Convenience name for target.
-untitled6: CMakeFiles/untitled6.dir/rule
-.PHONY : untitled6
+tema1PA: CMakeFiles/tema1PA.dir/rule
+.PHONY : tema1PA
 
 # clean rule for target.
-CMakeFiles/untitled6.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled6.dir/build.make CMakeFiles/untitled6.dir/clean
-.PHONY : CMakeFiles/untitled6.dir/clean
+CMakeFiles/tema1PA.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tema1PA.dir/build.make CMakeFiles/tema1PA.dir/clean
+.PHONY : CMakeFiles/tema1PA.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

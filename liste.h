@@ -2,8 +2,6 @@
 #include <stdio.h>
 #include <string.h>
 
-typedef int Data;
-
 typedef struct Player
 {
     char* firstName;
@@ -32,4 +30,5 @@ void addTeamBeginning(TEAM **head, char* teamName, int teamMembers, PLAYER *play
 void addPlayerBeginning(PLAYER **head, char* playerFirstName, char* playerSecondName, int playerPoints);
 void displayTeam(TEAM *head);
 void displayPlayers(PLAYER *head);
+void deleteTeam(TEAM **team);
 TEAM* initTeams(FILE* in);

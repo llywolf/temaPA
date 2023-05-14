@@ -36,3 +36,6 @@ int alocName(char** name, int newLen, int num, char buffer[100]);
 void separateName(int newLen, char *name, char** fName, char** sName);
 void addTeam(TEAM** team, char* teamName, int nrMembri, PLAYER* players);
 void free3strings(char* name, char* fName, char* sName);
+void getScore(TEAM** team);
+void deletePlayers(TEAM** team);
+void deleteTeamSurplus(TEAM** team, int nrEchipe, int nrMaxEchipe);

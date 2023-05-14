@@ -4,12 +4,12 @@ int main(/*int argc, char *argv[]*/) {
     //argc = 4;
     //deschidere fisiere
     FILE *checker, *in, *out;
-    checker =fopen("/mnt/c/Users/carag/CLionProjects/tema1PA/date/t1/c.in"/*argv[0]*/, "rt");
+    checker =fopen("/mnt/c/Users/carag/CLionProjects/tema1PA/date/t4/c.in"/*argv[0]*/, "rt");
     if(checker == NULL){
         fprintf(stderr, "\n Eroare checker\n");
         exit(1);
     }
-    in = fopen("/mnt/c/Users/carag/CLionProjects/tema1PA/date/t1/d.in"/*argv[1]*/, "rt");
+    in = fopen("/mnt/c/Users/carag/CLionProjects/tema1PA/date/t4/d.in"/*argv[1]*/, "rt");
     if (in == NULL) {
         fprintf(stderr, "\nEroare deschidere fisier date\n");
         exit(1);
@@ -43,10 +43,31 @@ int main(/*int argc, char *argv[]*/) {
         }
     }
     //------------------------------------TASK 2-------------------------------------
-    /*if(check[1] == '1'){
+    if(check[1] == '1'){
+        getScore(&teams->teamHead);
+        displayTeam(teams->teamHead);       //afisare
+        fclose(out);
+        out = fopen("/mnt/c/Users/carag/CLionProjects/tema1PA/r.out"/*argv[2]*/, "wt");
+        if (out == NULL) {
+            fprintf(stderr, "\nEroare deschidere fisier rezultate\n");
+            exit(1);
+        }
+        int nrMaxEchipe = 1;
+        for(int i = 1; nrEchipe > nrMaxEchipe; i++)     //nr maxim de echipe
+        {
+            nrMaxEchipe *= 2;
+        }
+        nrMaxEchipe /=2;
+        deleteTeamSurplus(&teams->teamHead, nrEchipe, nrMaxEchipe);
+        aux = teams->teamHead;
+        while (aux != NULL) {
+            fprintf(out, "%s %d\n", aux->name, aux->points);
+            aux = aux->next;
+        }
+        /*de ce mama naibii e luata invers lista la cerinta asta ca n are sens si mai e si formulata vag ffs*/
+    }
 
-    }*/
-    //displayTeam(teams->teamHead);       //afisare
+
     //eliberare de memorie
     TEAM* toDelete = teams->teamHead;
     deleteTeam(&toDelete);

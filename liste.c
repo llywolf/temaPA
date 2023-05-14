@@ -30,7 +30,7 @@ void addPlayerBeginning(PLAYER **head, char *playerFirstName, char *playerSecond
 void displayTeam(TEAM *head) {
     TEAM* headCopy = head;
     while (headCopy != NULL) {
-        printf("\n%s-%d-%d", headCopy->name, /*headCopy->points*/ 0, headCopy->nrMembers);
+        printf("\n%s-%d-%d", headCopy->name, headCopy->points, headCopy->nrMembers);
         printf("\n");
         displayPlayers(headCopy->members->playerHead);
         printf("\n--------------------------------------------");
@@ -91,7 +91,7 @@ void separateName(int newLen, char *name, char** fName, char** sName){
     *fName = malloc(sizeof(char) * (j));
     memcpy(*fName, name, sizeof(char) * j);
     (*fName)[j] = '\0';
-    *sName = malloc(sizeof(char) * (newLen - j + 2));        // + 1 pt '\0'
+    *sName = malloc(sizeof(char) * (newLen - j + 1));        // + 1 pt '\0'
     memcpy(*sName, name + j + 1, newLen - j + 1);
     (*sName)[newLen - j + 1] = '\0';
 }
@@ -160,4 +160,76 @@ TEAM *initTeams(FILE *in) {
         }
     }
     return team;
+}
+
+void getScore(TEAM** team){
+    if(team == NULL){
+        printf("eroare memorie echipa(calculeazaScor)");
+        exit(1);
+    }
+    TEAM* copy = *team;
+    while(copy != NULL){
+        int scor = 0, sum = 0;
+        PLAYER* playerCopy = copy->members->playerHead;
+        while(playerCopy != NULL){
+            sum += playerCopy->points;
+            playerCopy = playerCopy->next;
+        }
+        scor = sum/copy->nrMembers;
+        copy->points = scor;
+        copy = copy->next;
+    }
+}
+
+void deletePlayers(TEAM** team){
+    TEAM* copy = *team;
+    while(copy->members->playerHead != NULL && copy->members != NULL){
+        PLAYER *prevPlayer = copy->members->playerHead;
+        copy->members->playerHead = copy->members->playerHead->next;
+        free(prevPlayer->firstName);
+        free(prevPlayer->secondName);
+        free(prevPlayer);
+    }
+    free(copy->members);
+}
+
+void deleteTeamSurplus(TEAM** team, int nrEchipe, int nrMaxEchipe){
+    if(team == NULL){
+        printf("\n eroare memorie echipa");
+        exit(1);
+    }
+    TEAM* copy = *team, *prev = copy;
+    while(nrEchipe > nrMaxEchipe){
+        int min = copy->points;     //calculez scorul minimul
+        printf("\n");
+        while (copy != NULL) {
+            if (min > copy->points) {
+                min = copy->points;
+            }
+            copy = copy->next;
+        }
+        copy = *team;
+        if (copy != NULL && min == copy->points) {        //cazul pt scor minim la capul listei
+            *team = (*team)->next;
+            free(copy->name);
+            deletePlayers(&copy);
+            free(copy);
+            copy = *team;
+            nrEchipe--;
+        }
+        while (copy != NULL && min != copy->points) {     //cand gasesc echipe cu scor minim le sterg din lista
+            prev = copy;
+            copy = copy->next;
+        }
+        if (copy == NULL) {
+            printf("\nMinimul nu a fost gasit");
+            return;
+        }
+        prev->next = copy->next;
+        free(copy->name);
+        deletePlayers(&copy);
+        nrEchipe--;
+        free(copy);
+        copy = *team;
+    }
 }

@@ -11,6 +11,7 @@
   </component>
   <component name="CMakeRunConfigurationManager">
     <generated>
+      <config projectName="untitled6" targetName="tema1PA" />
       <config projectName="untitled6" targetName="untitled6" />
     </generated>
   </component>
@@ -21,39 +22,72 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8c7027b4-c0e9-4515-a395-3b69005ba5e0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-1c23567bab008574a213.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2023-05-10T13-42-23-0800.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-untitled6-Debug-57b601af13e38e693777.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/checker.sh" beforeDir="false" afterPath="$PROJECT_DIR$/checker.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-ef18c1fc92ca3c1dcdd9.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2023-05-11T13-18-11-0231.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled6.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled6.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled6.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled6.dir/compiler_depend.internal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled6.dir/compiler_depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled6.dir/compiler_depend.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled6.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled6.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled6.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled6.dir/liste.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled6.dir/liste.c.o.d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled6.dir/main.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled6.dir/main.c.o.d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled6.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tema1PA.dir/liste.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tema1PA.dir/liste.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tema1PA.dir/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tema1PA.dir/main.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/untitled6" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/untitled6" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/untitled6.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/untitled6.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/tema1PA" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/tema1PA" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laPparty" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lan-party-02-checker-main/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lan-party-02-checker-main/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lan-party-02-checker-main/checker.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lan-party-02-checker-main/date/t1/c.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lan-party-02-checker-main/date/t1/d.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lan-party-02-checker-main/date/t10/c.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lan-party-02-checker-main/date/t10/d.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lan-party-02-checker-main/date/t11/c.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lan-party-02-checker-main/date/t11/d.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lan-party-02-checker-main/date/t12/c.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lan-party-02-checker-main/date/t12/d.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lan-party-02-checker-main/date/t13/c.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lan-party-02-checker-main/date/t13/d.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lan-party-02-checker-main/date/t14/c.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lan-party-02-checker-main/date/t14/d.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lan-party-02-checker-main/date/t15/c.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lan-party-02-checker-main/date/t15/d.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lan-party-02-checker-main/date/t2/c.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lan-party-02-checker-main/date/t2/d.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lan-party-02-checker-main/date/t3/c.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lan-party-02-checker-main/date/t3/d.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lan-party-02-checker-main/date/t4/c.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lan-party-02-checker-main/date/t4/d.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lan-party-02-checker-main/date/t5/c.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lan-party-02-checker-main/date/t5/d.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lan-party-02-checker-main/date/t6/c.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lan-party-02-checker-main/date/t6/d.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lan-party-02-checker-main/date/t7/c.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lan-party-02-checker-main/date/t7/d.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lan-party-02-checker-main/date/t8/c.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lan-party-02-checker-main/date/t8/d.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lan-party-02-checker-main/date/t9/c.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lan-party-02-checker-main/date/t9/d.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lan-party-02-checker-main/rezultate/r1.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lan-party-02-checker-main/rezultate/r10.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lan-party-02-checker-main/rezultate/r11.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lan-party-02-checker-main/rezultate/r12.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lan-party-02-checker-main/rezultate/r13.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lan-party-02-checker-main/rezultate/r14.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lan-party-02-checker-main/rezultate/r15.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lan-party-02-checker-main/rezultate/r2.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lan-party-02-checker-main/rezultate/r3.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lan-party-02-checker-main/rezultate/r4.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lan-party-02-checker-main/rezultate/r5.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lan-party-02-checker-main/rezultate/r6.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lan-party-02-checker-main/rezultate/r7.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lan-party-02-checker-main/rezultate/r8.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lan-party-02-checker-main/rezultate/r9.out" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/lanParty" beforeDir="false" afterPath="$PROJECT_DIR$/lanParty" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/liste.c" beforeDir="false" afterPath="$PROJECT_DIR$/liste.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/liste.h" beforeDir="false" afterPath="$PROJECT_DIR$/liste.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/liste.o" beforeDir="false" afterPath="$PROJECT_DIR$/liste.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.o" beforeDir="false" afterPath="$PROJECT_DIR$/main.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/r.out" beforeDir="false" afterPath="$PROJECT_DIR$/r.out" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,6 +134,11 @@
   }
 }</component>
   <component name="RunManager">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="tema1PA" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="untitled6" TARGET_NAME="tema1PA" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="untitled6" RUN_TARGET_NAME="tema1PA">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -138,7 +177,9 @@
       <workItem from="1683832598737" duration="8103000" />
       <workItem from="1683961091359" duration="5615000" />
       <workItem from="1683967763754" duration="1363000" />
-      <workItem from="1683977466543" duration="8543000" />
+      <workItem from="1683977466543" duration="9739000" />
+      <workItem from="1684082440771" duration="1231000" />
+      <workItem from="1684083713182" duration="2319000" />
     </task>
     <servers />
   </component>

@@ -32,3 +32,7 @@ void displayTeam(TEAM *head);
 void displayPlayers(PLAYER *head);
 void deleteTeam(TEAM **team);
 TEAM* initTeams(FILE* in);
+int alocName(char** name, int newLen, int num, char buffer[100]);
+void separateName(int newLen, char *name, char** fName, char** sName);
+void addTeam(TEAM** team, char* teamName, int nrMembri, PLAYER* players);
+void free3strings(char* name, char* fName, char* sName);

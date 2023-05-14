@@ -54,7 +54,6 @@ void deleteTeam(TEAM** team){
     TEAM* copy = *team;
     while(*team != NULL){
         *team = (*team)->next;
-        printf("\n\najung aci");
         free(copy->name);
         while(copy->members->playerHead != NULL && copy->members != NULL){
             PLAYER *prev = copy->members->playerHead;
@@ -67,6 +66,58 @@ void deleteTeam(TEAM** team){
         free(copy);
         copy = *team;
     }
+}
+
+int alocName(char** name, int newLen, int num, char buffer[100]){
+    if (num > 9) {      // difera dimensiunea in functie nr de cifre al lui num
+        *name = malloc((newLen - 1) * sizeof(char));
+        memmove(*name, buffer, sizeof(char) * (newLen - 2));
+        (*name)[newLen - 2] = '\0';
+        //newLen = strlen(name);
+    } else {
+        *name = malloc((newLen) * sizeof(char));
+        memmove(*name, buffer, sizeof(char) * (newLen - 1));
+        (*name)[newLen - 1] = '\0';
+        //newLen = strlen(name);
+    }
+    return strlen(*name);
+}
+
+void separateName(int newLen, char *name, char** fName, char** sName){
+    int j = 0;
+    for(j = 0; j < newLen; j++)
+        if(name[j] == ' ')
+            break;
+    *fName = malloc(sizeof(char) * (j));
+    memcpy(*fName, name, sizeof(char) * j);
+    (*fName)[j] = '\0';
+    *sName = malloc(sizeof(char) * (newLen - j + 2));        // + 1 pt '\0'
+    memcpy(*sName, name + j + 1, newLen - j + 1);
+    (*sName)[newLen - j + 1] = '\0';
+}
+
+void addTeam(TEAM** team, char* teamName, int nrMembri, PLAYER* players){
+    if(*team == NULL){
+        addTeamBeginning(team, teamName, nrMembri, players);
+        (*team)->next = NULL;
+    }
+    else
+        addTeamBeginning(team, teamName, nrMembri, players);
+}
+
+void addPlayer(PLAYER **players, char* fName, char*sName, int num){
+    if(*players == NULL){
+        addPlayerBeginning(players, fName, sName, num);
+        (*players)->next = NULL;
+    }
+    else
+        addPlayerBeginning(players, fName, sName, num);
+}
+
+void free3strings(char* name, char* fName, char* sName){
+    free(name);
+    free(fName);
+    free(sName);
 }
 
 TEAM *initTeams(FILE *in) {
@@ -97,44 +148,13 @@ TEAM *initTeams(FILE *in) {
                     }
                 }
                 int newLen = len - 3; // pt nume
-                if (num > 9) {      // difera dimensiunea in functie nr de cifre al lui num
-                    name = malloc((newLen - 1) * sizeof(char));
-                    memmove(name, buffer, sizeof(char) * (newLen - 2));
-                    name[newLen - 2] = '\0';
-                    newLen = strlen(name);
-                } else {
-                    name = malloc((newLen) * sizeof(char));
-                    memmove(name, buffer, sizeof(char) * (newLen - 1));
-                    name[newLen - 1] = '\0';
-                    newLen = strlen(name);
-                }
+                newLen = alocName(&name, newLen, num, buffer);
                 char *fName = NULL, *sName = NULL;
-                int j = 0;
-                for(j = 0; j < newLen; j++)
-                    if(name[j] == ' ')
-                        break;
-                fName = malloc(sizeof(char) * (j));
-                memcpy(fName, name, sizeof(char) * j);
-                fName[j] = '\0';
-                sName = malloc(sizeof(char) * (newLen - j + 2));        // + 1 pt '\0'
-                memcpy(sName, name + j + 1, newLen - j + 1);
-                sName[newLen - j + 1] = '\0';
-                if(players == NULL){
-                    addPlayerBeginning(&players, fName, sName, num);
-                    players->next = NULL;
-                }
-                else
-                    addPlayerBeginning(&players, fName, sName, num);
-                free(name);
-                free(fName);
-                free(sName);
+                separateName(newLen, name, &fName, &sName);
+                addPlayer(&players, fName, sName, num);
+                free3strings(name, fName, sName);       // pt functia cu 40 de linii de cod
             }
-            if(team == NULL){
-                addTeamBeginning(&team, teamName, nrMembrii, players);
-                team->next = NULL;
-            }
-            else
-                addTeamBeginning(&team, teamName, nrMembrii, players);
+            addTeam(&team, teamName, nrMembrii, players);
             free(teamName);
             players = NULL;
         }

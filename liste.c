@@ -131,11 +131,10 @@ TEAM *initTeams(FILE *in) {
             continue;
         if (buffer[0] <= '9' && buffer[0] >= '1') {      //pentru inregistrarea echipei
             num = strtol(buffer, &endPtr, 10);
-            len = strlen(endPtr);       //endPtr o sa fie numele echipei(din cauza lui strtol)
-            buffer[len - 1] = '\0';
-            char* teamName = malloc((len + 1) * sizeof(char));        // len+1 pt '\0'
+            len = strlen(endPtr)-2;//endPtr o sa fie numele echipei(din cauza lui strtol)
+            char* teamName = malloc((len) * sizeof(char));        // len+1 pt '\0'
             memmove(teamName, endPtr + 1, len * sizeof(char));
-            teamName[len - 1] = '\0';
+            teamName[len] = '\0';
             int nrMembrii = num;
             for(int i = 0; i < nrMembrii; i++){     //pentru membrii
                 fgets(buffer, sizeof(buffer), in);
@@ -198,10 +197,11 @@ void deleteTeamSurplus(TEAM** team, int nrEchipe, int nrMaxEchipe){
         printf("\n eroare memorie echipa");
         exit(1);
     }
-    TEAM* copy = *team, *prev = copy;
+    TEAM* copy = *team;
+    TEAM *prev = copy;
     while(nrEchipe > nrMaxEchipe){
         int min = copy->points;     //calculez scorul minimul
-        printf("\n");
+       // printf("\n");
         while (copy != NULL) {
             if (min > copy->points) {
                 min = copy->points;
@@ -217,19 +217,21 @@ void deleteTeamSurplus(TEAM** team, int nrEchipe, int nrMaxEchipe){
             copy = *team;
             nrEchipe--;
         }
-        while (copy != NULL && min != copy->points) {     //cand gasesc echipe cu scor minim le sterg din lista
-            prev = copy;
-            copy = copy->next;
+        else {
+            while (copy != NULL && min != copy->points) {     //cand gasesc echipe cu scor minim le sterg din lista
+                prev = copy;
+                copy = copy->next;
+            }
+            if (copy == NULL) {
+                printf("\nMinimul nu a fost gasit");
+                return;
+            }
+            prev->next = copy->next;
+            free(copy->name);
+            deletePlayers(&copy);
+            nrEchipe--;
+            free(copy);
+            copy = *team;
         }
-        if (copy == NULL) {
-            printf("\nMinimul nu a fost gasit");
-            return;
-        }
-        prev->next = copy->next;
-        free(copy->name);
-        deletePlayers(&copy);
-        nrEchipe--;
-        free(copy);
-        copy = *team;
     }
 }

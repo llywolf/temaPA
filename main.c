@@ -1,20 +1,20 @@
 #include "liste.h"
 
-int main(/*int argc, char *argv[]*/) {
+int main(int argc, char *argv[]) {
     //argc = 4;
     //deschidere fisiere
     FILE *checker, *in, *out;
-    checker =fopen("/mnt/c/Users/carag/CLionProjects/tema1PA/date/t4/c.in"/*argv[0]*/, "rt");
+    checker =fopen(/*"/mnt/c/Users/carag/CLionProjects/tema1PA/date/t4/c.in"*/argv[1], "rt");
     if(checker == NULL){
         fprintf(stderr, "\n Eroare checker\n");
         exit(1);
     }
-    in = fopen("/mnt/c/Users/carag/CLionProjects/tema1PA/date/t4/d.in"/*argv[1]*/, "rt");
+    in = fopen(/*"/mnt/c/Users/carag/CLionProjects/tema1PA/date/t4/d.in"*/argv[2], "rt");
     if (in == NULL) {
         fprintf(stderr, "\nEroare deschidere fisier date\n");
         exit(1);
     }
-    out = fopen("/mnt/c/Users/carag/CLionProjects/tema1PA/r.out"/*argv[2]*/, "wt");
+    out = fopen(/*"/mnt/c/Users/carag/CLionProjects/tema1PA/r.out"*/argv[3], "wt");
     if (out == NULL) {
         fprintf(stderr, "\nEroare deschidere fisier rezultate\n");
         exit(1);
@@ -45,9 +45,9 @@ int main(/*int argc, char *argv[]*/) {
     //------------------------------------TASK 2-------------------------------------
     if(check[1] == '1'){
         getScore(&teams->teamHead);
-        displayTeam(teams->teamHead);       //afisare
+        //displayTeam(teams->teamHead);       //afisare
         fclose(out);
-        out = fopen("/mnt/c/Users/carag/CLionProjects/tema1PA/r.out"/*argv[2]*/, "wt");
+        out = fopen(/*"/mnt/c/Users/carag/CLionProjects/tema1PA/r.out"*/argv[3], "wt");
         if (out == NULL) {
             fprintf(stderr, "\nEroare deschidere fisier rezultate\n");
             exit(1);

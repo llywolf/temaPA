@@ -16,7 +16,7 @@ typedef struct PlayerList{
 
 typedef struct Team{
     char* name;
-    int points;
+    float points;
     int nrMembers;
     PLAYERLIST* members;
     struct Team* next;

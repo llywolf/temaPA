@@ -30,7 +30,7 @@ void addPlayerBeginning(PLAYER **head, char *playerFirstName, char *playerSecond
 void displayTeam(TEAM *head) {
     TEAM* headCopy = head;
     while (headCopy != NULL) {
-        printf("\n%s-%d-%d", headCopy->name, headCopy->points, headCopy->nrMembers);
+        printf("\n%s-%f-%d", headCopy->name, headCopy->points, headCopy->nrMembers);
         printf("\n");
         displayPlayers(headCopy->members->playerHead);
         printf("\n--------------------------------------------");
@@ -168,13 +168,13 @@ void getScore(TEAM** team){
     }
     TEAM* copy = *team;
     while(copy != NULL){
-        int scor = 0, sum = 0;
+        float scor = 0, sum = 0;
         PLAYER* playerCopy = copy->members->playerHead;
         while(playerCopy != NULL){
             sum += playerCopy->points;
             playerCopy = playerCopy->next;
         }
-        scor = sum/copy->nrMembers;
+        scor = sum/(float)copy->nrMembers;
         copy->points = scor;
         copy = copy->next;
     }
@@ -200,7 +200,7 @@ void deleteTeamSurplus(TEAM** team, int nrEchipe, int nrMaxEchipe){
     TEAM* copy = *team;
     TEAM *prev = copy;
     while(nrEchipe > nrMaxEchipe){
-        int min = copy->points;     //calculez scorul minimul
+        float min = copy->points;     //calculez scorul minimul
        // printf("\n");
         while (copy != NULL) {
             if (min > copy->points) {

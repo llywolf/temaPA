@@ -21,7 +21,29 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c7027b4-c0e9-4515-a395-3b69005ba5e0" name="Changes" comment="" />
+    <list default="true" id="8c7027b4-c0e9-4515-a395-3b69005ba5e0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lanParty" beforeDir="false" afterPath="$PROJECT_DIR$/lanParty" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liste.c" beforeDir="false" afterPath="$PROJECT_DIR$/liste.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liste.h" beforeDir="false" afterPath="$PROJECT_DIR$/liste.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liste.o" beforeDir="false" afterPath="$PROJECT_DIR$/liste.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.o" beforeDir="false" afterPath="$PROJECT_DIR$/main.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/out10.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/out10.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/out11.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/out11.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/out12.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/out12.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/out13.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/out13.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/out14.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/out14.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/out15.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/out15.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/out4.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/out4.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/out5.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/out5.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/out6.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/out6.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/out7.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/out7.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/out8.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/out8.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/out9.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/out9.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r.out" beforeDir="false" afterPath="$PROJECT_DIR$/r.out" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -67,11 +89,6 @@
   }
 }</component>
   <component name="RunManager">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="tema1PA" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="untitled6" TARGET_NAME="tema1PA" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="untitled6" RUN_TARGET_NAME="tema1PA">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -113,6 +130,8 @@
       <workItem from="1683977466543" duration="9739000" />
       <workItem from="1684082440771" duration="1231000" />
       <workItem from="1684083713182" duration="11671000" />
+      <workItem from="1684173533975" duration="3049000" />
+      <workItem from="1684333533451" duration="922000" />
     </task>
     <servers />
   </component>

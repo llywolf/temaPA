@@ -61,13 +61,11 @@ int main(int argc, char *argv[]) {
         deleteTeamSurplus(&teams->teamHead, nrEchipe, nrMaxEchipe);
         aux = teams->teamHead;
         while (aux != NULL) {
-            fprintf(out, "%s %d\n", aux->name, aux->points);
+            fprintf(out, "%s\n", aux->name);
             aux = aux->next;
         }
         /*de ce mama naibii e luata invers lista la cerinta asta ca n are sens si mai e si formulata vag ffs*/
     }
-
-
     //eliberare de memorie
     TEAM* toDelete = teams->teamHead;
     deleteTeam(&toDelete);

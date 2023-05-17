@@ -57,10 +57,10 @@ RM = /opt/cmake-3.25.3-linux-x86_64/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Users/carag/CLionProjects/temaPA-main
+CMAKE_SOURCE_DIR = /mnt/c/Users/carag/CLionProjects/tema1PA
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Users/carag/CLionProjects/temaPA-main/cmake-build-debug
+CMAKE_BINARY_DIR = /mnt/c/Users/carag/CLionProjects/tema1PA/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/carag/CLionProjects/temaPA-main/cmake-build-debug/CMakeFiles /mnt/c/Users/carag/CLionProjects/temaPA-main/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/carag/CLionProjects/tema1PA/cmake-build-debug/CMakeFiles /mnt/c/Users/carag/CLionProjects/tema1PA/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/carag/CLionProjects/temaPA-main/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/carag/CLionProjects/tema1PA/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -128,6 +128,30 @@ tema1PA: cmake_check_build_system
 tema1PA/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tema1PA.dir/build.make CMakeFiles/tema1PA.dir/build
 .PHONY : tema1PA/fast
+
+cozi.o: cozi.c.o
+.PHONY : cozi.o
+
+# target to build an object file
+cozi.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tema1PA.dir/build.make CMakeFiles/tema1PA.dir/cozi.c.o
+.PHONY : cozi.c.o
+
+cozi.i: cozi.c.i
+.PHONY : cozi.i
+
+# target to preprocess a source file
+cozi.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tema1PA.dir/build.make CMakeFiles/tema1PA.dir/cozi.c.i
+.PHONY : cozi.c.i
+
+cozi.s: cozi.c.s
+.PHONY : cozi.s
+
+# target to generate assembly for a file
+cozi.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tema1PA.dir/build.make CMakeFiles/tema1PA.dir/cozi.c.s
+.PHONY : cozi.c.s
 
 liste.o: liste.c.o
 .PHONY : liste.o
@@ -177,6 +201,30 @@ main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tema1PA.dir/build.make CMakeFiles/tema1PA.dir/main.c.s
 .PHONY : main.c.s
 
+stive.o: stive.c.o
+.PHONY : stive.o
+
+# target to build an object file
+stive.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tema1PA.dir/build.make CMakeFiles/tema1PA.dir/stive.c.o
+.PHONY : stive.c.o
+
+stive.i: stive.c.i
+.PHONY : stive.i
+
+# target to preprocess a source file
+stive.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tema1PA.dir/build.make CMakeFiles/tema1PA.dir/stive.c.i
+.PHONY : stive.c.i
+
+stive.s: stive.c.s
+.PHONY : stive.s
+
+# target to generate assembly for a file
+stive.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tema1PA.dir/build.make CMakeFiles/tema1PA.dir/stive.c.s
+.PHONY : stive.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -186,12 +234,18 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... tema1PA"
+	@echo "... cozi.o"
+	@echo "... cozi.i"
+	@echo "... cozi.s"
 	@echo "... liste.o"
 	@echo "... liste.i"
 	@echo "... liste.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... stive.o"
+	@echo "... stive.i"
+	@echo "... stive.s"
 .PHONY : help
 
 

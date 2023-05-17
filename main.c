@@ -1,20 +1,22 @@
+#include "structuri.h"
 #include "liste.h"
+#include "stive.h"
+#include "cozi.h"
 
 int main(int argc, char *argv[]) {
-    //argc = 4;
     //deschidere fisiere
     FILE *checker, *in, *out;
-    checker =fopen(/*"/mnt/c/Users/carag/CLionProjects/tema1PA/date/t4/c.in"*/argv[1], "rt");
+    checker =fopen(/*c.in*/argv[1], "rt");
     if(checker == NULL){
         fprintf(stderr, "\n Eroare checker\n");
         exit(1);
     }
-    in = fopen(/*"/mnt/c/Users/carag/CLionProjects/tema1PA/date/t4/d.in"*/argv[2], "rt");
+    in = fopen(/*d.in*/argv[2], "rt");
     if (in == NULL) {
         fprintf(stderr, "\nEroare deschidere fisier date\n");
         exit(1);
     }
-    out = fopen(/*"/mnt/c/Users/carag/CLionProjects/tema1PA/r.out"*/argv[3], "wt");
+    out = fopen(/*r.out*/argv[3], "wt");
     if (out == NULL) {
         fprintf(stderr, "\nEroare deschidere fisier rezultate\n");
         exit(1);
@@ -23,11 +25,10 @@ int main(int argc, char *argv[]) {
     char *check = malloc(5 * sizeof(char));
     for(int i = 0; i < 5; i++) {
         fscanf(checker, "%c ", &check[i]);
-        //printf("\n%c ", check[i]);
+
     }
-    //citesc din fisier
     int nrEchipe;
-    fscanf(in, "%d ", &nrEchipe);
+    fscanf(in, "%d ", &nrEchipe);       //numarul de echipe se afla pe primul rand
     TEAMLIST *teams = NULL;
     TEAM* aux = NULL;
     //alocari de memorie
@@ -45,9 +46,8 @@ int main(int argc, char *argv[]) {
     //------------------------------------TASK 2-------------------------------------
     if(check[1] == '1'){
         getScore(&teams->teamHead);
-        //displayTeam(teams->teamHead);       //afisare
         fclose(out);
-        out = fopen(/*"/mnt/c/Users/carag/CLionProjects/tema1PA/r.out"*/argv[3], "wt");
+        out = fopen(/*r.out*/argv[3], "wt");
         if (out == NULL) {
             fprintf(stderr, "\nEroare deschidere fisier rezultate\n");
             exit(1);
@@ -64,8 +64,32 @@ int main(int argc, char *argv[]) {
             fprintf(out, "%s\n", aux->name);
             aux = aux->next;
         }
-        /*de ce mama naibii e luata invers lista la cerinta asta ca n are sens si mai e si formulata vag ffs*/
     }
+    //------------------------------------TASK 3-------------------------------------
+    if(check[2] == '1'){
+        aux = teams->teamHead;
+        QUEUE *queue = createQueue();
+        STACK *winners = NULL, *losers = NULL;
+        while (aux != NULL) {
+            enQueue(queue, aux, aux->next);
+            aux = aux->next->next;
+            //printf("%s-%s | %s-%s\n", queue->rear->firstTeam->name, queue->rear->secondTeam->name, queue->front->firstTeam->name, queue->front->secondTeam->name);
+        }
+        //creaza stive, modifica echipe
+        while(queue->front != NULL){
+            TEAM *winnerTeam = NULL, *loserTeam = NULL;
+            deQueue(queue, &winnerTeam, &loserTeam);
+            push(&winners, winnerTeam);
+            push(&losers, loserTeam);
+        }
+        while(winners != NULL){
+            //sterge losers, schimba scoru
+            TEAM *auxStack = pop(&winners);
+            printf("|%s|\n", auxStack->name);
+        }
+    }
+
+
     //eliberare de memorie
     TEAM* toDelete = teams->teamHead;
     deleteTeam(&toDelete);

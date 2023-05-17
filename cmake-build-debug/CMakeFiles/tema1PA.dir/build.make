@@ -53,10 +53,10 @@ RM = /opt/cmake-3.25.3-linux-x86_64/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Users/carag/CLionProjects/temaPA-main
+CMAKE_SOURCE_DIR = /mnt/c/Users/carag/CLionProjects/tema1PA
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Users/carag/CLionProjects/temaPA-main/cmake-build-debug
+CMAKE_BINARY_DIR = /mnt/c/Users/carag/CLionProjects/tema1PA/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/tema1PA.dir/depend.make
@@ -70,46 +70,78 @@ include CMakeFiles/tema1PA.dir/progress.make
 include CMakeFiles/tema1PA.dir/flags.make
 
 CMakeFiles/tema1PA.dir/main.c.o: CMakeFiles/tema1PA.dir/flags.make
-CMakeFiles/tema1PA.dir/main.c.o: /mnt/c/Users/carag/CLionProjects/temaPA-main/main.c
+CMakeFiles/tema1PA.dir/main.c.o: /mnt/c/Users/carag/CLionProjects/tema1PA/main.c
 CMakeFiles/tema1PA.dir/main.c.o: CMakeFiles/tema1PA.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/carag/CLionProjects/temaPA-main/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/tema1PA.dir/main.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/tema1PA.dir/main.c.o -MF CMakeFiles/tema1PA.dir/main.c.o.d -o CMakeFiles/tema1PA.dir/main.c.o -c /mnt/c/Users/carag/CLionProjects/temaPA-main/main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/carag/CLionProjects/tema1PA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/tema1PA.dir/main.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/tema1PA.dir/main.c.o -MF CMakeFiles/tema1PA.dir/main.c.o.d -o CMakeFiles/tema1PA.dir/main.c.o -c /mnt/c/Users/carag/CLionProjects/tema1PA/main.c
 
 CMakeFiles/tema1PA.dir/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/tema1PA.dir/main.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/carag/CLionProjects/temaPA-main/main.c > CMakeFiles/tema1PA.dir/main.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/carag/CLionProjects/tema1PA/main.c > CMakeFiles/tema1PA.dir/main.c.i
 
 CMakeFiles/tema1PA.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/tema1PA.dir/main.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/carag/CLionProjects/temaPA-main/main.c -o CMakeFiles/tema1PA.dir/main.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/carag/CLionProjects/tema1PA/main.c -o CMakeFiles/tema1PA.dir/main.c.s
 
 CMakeFiles/tema1PA.dir/liste.c.o: CMakeFiles/tema1PA.dir/flags.make
-CMakeFiles/tema1PA.dir/liste.c.o: /mnt/c/Users/carag/CLionProjects/temaPA-main/liste.c
+CMakeFiles/tema1PA.dir/liste.c.o: /mnt/c/Users/carag/CLionProjects/tema1PA/liste.c
 CMakeFiles/tema1PA.dir/liste.c.o: CMakeFiles/tema1PA.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/carag/CLionProjects/temaPA-main/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/tema1PA.dir/liste.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/tema1PA.dir/liste.c.o -MF CMakeFiles/tema1PA.dir/liste.c.o.d -o CMakeFiles/tema1PA.dir/liste.c.o -c /mnt/c/Users/carag/CLionProjects/temaPA-main/liste.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/carag/CLionProjects/tema1PA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/tema1PA.dir/liste.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/tema1PA.dir/liste.c.o -MF CMakeFiles/tema1PA.dir/liste.c.o.d -o CMakeFiles/tema1PA.dir/liste.c.o -c /mnt/c/Users/carag/CLionProjects/tema1PA/liste.c
 
 CMakeFiles/tema1PA.dir/liste.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/tema1PA.dir/liste.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/carag/CLionProjects/temaPA-main/liste.c > CMakeFiles/tema1PA.dir/liste.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/carag/CLionProjects/tema1PA/liste.c > CMakeFiles/tema1PA.dir/liste.c.i
 
 CMakeFiles/tema1PA.dir/liste.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/tema1PA.dir/liste.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/carag/CLionProjects/temaPA-main/liste.c -o CMakeFiles/tema1PA.dir/liste.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/carag/CLionProjects/tema1PA/liste.c -o CMakeFiles/tema1PA.dir/liste.c.s
+
+CMakeFiles/tema1PA.dir/stive.c.o: CMakeFiles/tema1PA.dir/flags.make
+CMakeFiles/tema1PA.dir/stive.c.o: /mnt/c/Users/carag/CLionProjects/tema1PA/stive.c
+CMakeFiles/tema1PA.dir/stive.c.o: CMakeFiles/tema1PA.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/carag/CLionProjects/tema1PA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/tema1PA.dir/stive.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/tema1PA.dir/stive.c.o -MF CMakeFiles/tema1PA.dir/stive.c.o.d -o CMakeFiles/tema1PA.dir/stive.c.o -c /mnt/c/Users/carag/CLionProjects/tema1PA/stive.c
+
+CMakeFiles/tema1PA.dir/stive.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/tema1PA.dir/stive.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/carag/CLionProjects/tema1PA/stive.c > CMakeFiles/tema1PA.dir/stive.c.i
+
+CMakeFiles/tema1PA.dir/stive.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/tema1PA.dir/stive.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/carag/CLionProjects/tema1PA/stive.c -o CMakeFiles/tema1PA.dir/stive.c.s
+
+CMakeFiles/tema1PA.dir/cozi.c.o: CMakeFiles/tema1PA.dir/flags.make
+CMakeFiles/tema1PA.dir/cozi.c.o: /mnt/c/Users/carag/CLionProjects/tema1PA/cozi.c
+CMakeFiles/tema1PA.dir/cozi.c.o: CMakeFiles/tema1PA.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/carag/CLionProjects/tema1PA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/tema1PA.dir/cozi.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/tema1PA.dir/cozi.c.o -MF CMakeFiles/tema1PA.dir/cozi.c.o.d -o CMakeFiles/tema1PA.dir/cozi.c.o -c /mnt/c/Users/carag/CLionProjects/tema1PA/cozi.c
+
+CMakeFiles/tema1PA.dir/cozi.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/tema1PA.dir/cozi.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/carag/CLionProjects/tema1PA/cozi.c > CMakeFiles/tema1PA.dir/cozi.c.i
+
+CMakeFiles/tema1PA.dir/cozi.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/tema1PA.dir/cozi.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/carag/CLionProjects/tema1PA/cozi.c -o CMakeFiles/tema1PA.dir/cozi.c.s
 
 # Object files for target tema1PA
 tema1PA_OBJECTS = \
 "CMakeFiles/tema1PA.dir/main.c.o" \
-"CMakeFiles/tema1PA.dir/liste.c.o"
+"CMakeFiles/tema1PA.dir/liste.c.o" \
+"CMakeFiles/tema1PA.dir/stive.c.o" \
+"CMakeFiles/tema1PA.dir/cozi.c.o"
 
 # External object files for target tema1PA
 tema1PA_EXTERNAL_OBJECTS =
 
 tema1PA: CMakeFiles/tema1PA.dir/main.c.o
 tema1PA: CMakeFiles/tema1PA.dir/liste.c.o
+tema1PA: CMakeFiles/tema1PA.dir/stive.c.o
+tema1PA: CMakeFiles/tema1PA.dir/cozi.c.o
 tema1PA: CMakeFiles/tema1PA.dir/build.make
 tema1PA: CMakeFiles/tema1PA.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/carag/CLionProjects/temaPA-main/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable tema1PA"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/carag/CLionProjects/tema1PA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable tema1PA"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/tema1PA.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -121,6 +153,6 @@ CMakeFiles/tema1PA.dir/clean:
 .PHONY : CMakeFiles/tema1PA.dir/clean
 
 CMakeFiles/tema1PA.dir/depend:
-	cd /mnt/c/Users/carag/CLionProjects/temaPA-main/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/carag/CLionProjects/temaPA-main /mnt/c/Users/carag/CLionProjects/temaPA-main /mnt/c/Users/carag/CLionProjects/temaPA-main/cmake-build-debug /mnt/c/Users/carag/CLionProjects/temaPA-main/cmake-build-debug /mnt/c/Users/carag/CLionProjects/temaPA-main/cmake-build-debug/CMakeFiles/tema1PA.dir/DependInfo.cmake --color=$(COLOR)
+	cd /mnt/c/Users/carag/CLionProjects/tema1PA/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/carag/CLionProjects/tema1PA /mnt/c/Users/carag/CLionProjects/tema1PA /mnt/c/Users/carag/CLionProjects/tema1PA/cmake-build-debug /mnt/c/Users/carag/CLionProjects/tema1PA/cmake-build-debug /mnt/c/Users/carag/CLionProjects/tema1PA/cmake-build-debug/CMakeFiles/tema1PA.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/tema1PA.dir/depend
 

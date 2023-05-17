@@ -129,11 +129,11 @@ TEAM *initTeams(FILE *in) {
         fgets(buffer, sizeof(buffer), in);
         if (strcmp(buffer, "\r\n") == 0)
             continue;
-        if (buffer[0] <= '9' && buffer[0] >= '1') {      //pentru inregistrarea echipei
+        if (buffer[0] <= '9' && buffer[0] >= '1') {      //inregistrarea echipei
             num = strtol(buffer, &endPtr, 10);
-            len = strlen(endPtr)-2;//endPtr o sa fie numele echipei(din cauza lui strtol)
+            len = strlen(endPtr) - 2;     //endPtr o sa fie numele echipei(din cauza lui strtol) | - 2 pt cifra si spatiu
             char* teamName = malloc((len) * sizeof(char));        // len+1 pt '\0'
-            memmove(teamName, endPtr + 1, len * sizeof(char));
+            memmove(teamName, endPtr + 1, len * sizeof(char));      // endPtr ramane la spatiu deci mai trebuie + 1
             teamName[len] = '\0';
             int nrMembrii = num;
             for(int i = 0; i < nrMembrii; i++){     //pentru membrii
@@ -151,7 +151,7 @@ TEAM *initTeams(FILE *in) {
                 char *fName = NULL, *sName = NULL;
                 separateName(newLen, name, &fName, &sName);
                 addPlayer(&players, fName, sName, num);
-                free3strings(name, fName, sName);       // pt functia cu 40 de linii de cod
+                free3strings(name, fName, sName);       // pt functie cu max 40 de linii de cod
             }
             addTeam(&team, teamName, nrMembrii, players);
             free(teamName);
@@ -171,7 +171,7 @@ void getScore(TEAM** team){
         float scor = 0, sum = 0;
         PLAYER* playerCopy = copy->members->playerHead;
         while(playerCopy != NULL){
-            sum += playerCopy->points;
+            sum += (float)playerCopy->points;
             playerCopy = playerCopy->next;
         }
         scor = sum/(float)copy->nrMembers;

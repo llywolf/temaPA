@@ -67,3 +67,11 @@ void deleteQueue(QUEUE *q){
     }
     free(q);
 }
+
+QUEUE* reinitQueue(QUEUE* queue){
+    if (queue != NULL) {
+        deleteQueue(queue);
+    }
+    queue = createQueue();
+    return queue;
+}

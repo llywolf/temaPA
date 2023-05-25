@@ -3,6 +3,13 @@
 #include "stive.h"
 #include "cozi.h"
 
+void updateName(char* fName, char* sName){
+    if(fName[strlen(fName) - 1] == ' ')
+        fName[strlen(fName) - 1] = '\0';
+    if(sName[strlen(sName) - 1] == ' ')
+        sName[strlen(sName) - 1] = '\0';
+}
+
 int main(int argc, char *argv[]) {
     //deschidere fisiere
     FILE *checker, *in, *out;
@@ -70,16 +77,13 @@ int main(int argc, char *argv[]) {
     //------------------------------------TASK 3-------------------------------------
     if (check[2] == '1') {
         aux = teams->teamHead;
-        int nrNouEchipe = calcNrEchipe(aux);
         TEAM* finalWinner = NULL;
-        int round = 0;
-        int onetime = 1;
+        int round = 0, onetime = 1, nrNouEchipe = calcNrEchipe(aux);
         QUEUE *queue = NULL;
         while (nrNouEchipe % 2 == 0) {
             round++;
             fprintf(out, "\n--- ROUND NO:%d", round);
             aux = teams->teamHead;
-
             STACK *winners = NULL, *losers = NULL;
             if(onetime==1) {
                 queue = createQueue();
@@ -93,66 +97,19 @@ int main(int argc, char *argv[]) {
             }
             aux = teams->teamHead;
             while (queue->front != NULL) {
-                if(queue->front->firstTeam->name[strlen(queue->front->firstTeam->name) - 1] == ' ')
-                    queue->front->firstTeam->name[strlen(queue->front->firstTeam->name) - 1] = '\0';
-                if(queue->front->secondTeam->name[strlen(queue->front->secondTeam->name) - 1] == ' ')
-                    queue->front->secondTeam->name[strlen(queue->front->secondTeam->name) - 1] = '\0';
+                updateName(queue->front->firstTeam->name,queue->front->secondTeam->name);
                 fprintf(out, "\n%-32s - %+32s", queue->front->firstTeam->name, queue->front->secondTeam->name);
                 TEAM *winnerTeam = NULL, *loserTeam = NULL;
                 deQueue(queue, &winnerTeam, &loserTeam);
                 push(&winners, winnerTeam);
                 push(&losers, loserTeam);
             }
-            //creaza stive, modifica echipe
-            //sterge losers, schimba scoru
-            while (losers != NULL) {
-                TEAM *auxStack = pop(&losers);
-                aux = teams->teamHead;
-                if (auxStack == aux) {
-                    teams->teamHead = teams->teamHead->next;
-                    aux = teams->teamHead;
-                    deleteTeam(&auxStack);
-                    auxStack = NULL;
-                }
-                else if (auxStack != NULL) {
-                    aux = teams->teamHead;
-                    if (aux != NULL) {
-                        while (aux->next != auxStack) {
-                            aux = aux->next;
-                        }
-                    }
-                    aux->next = auxStack->next;
-                    deleteTeam(&auxStack);
-                    auxStack = NULL;
-                }
-            }
-
+            //creaza stive, sterge losers, schimba scoru
+            deleteLosers(losers, &teams->teamHead);
             fprintf(out, "\n\nWINNERS OF ROUND NO:%d", round);
             aux = teams->teamHead;
-            if (queue != NULL) {
-                deleteQueue(queue);
-            }
-            queue = createQueue();
-            while (winners != NULL) {
-                TEAM *winner = pop(&winners);
-                if(winners == NULL) {
-                    finalWinner = winner;
-                    scoreUpdate(&finalWinner);
-                    getScore(&finalWinner);
-                    teams->teamHead = finalWinner;
-                    deleteQueue(queue);
-                    fprintf(out, "\n%-32s  -  %.2f",finalWinner->name, finalWinner->points);
-                    break;
-                }
-                TEAM *nextWinner = pop(&winners);
-                scoreUpdate(&winner);
-                scoreUpdate(&nextWinner);
-                getScore(&winner);
-                getScore(&nextWinner);
-                fprintf(out, "\n%-32s  -  %.2f\n%-32s  -  %.2f", winner->name, winner->points, nextWinner->name, nextWinner->points);
-                enQueue(queue, &winner, &nextWinner);
-
-            }
+            queue = reinitQueue(queue);
+            updateWinners(winners, finalWinner, &teams, queue, out);
             fprintf(out, "\n");
             aux = teams->teamHead;
             nrNouEchipe/=2;

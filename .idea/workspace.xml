@@ -22,11 +22,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8c7027b4-c0e9-4515-a395-3b69005ba5e0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozi.c" beforeDir="false" afterPath="$PROJECT_DIR$/cozi.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozi.h" beforeDir="false" afterPath="$PROJECT_DIR$/cozi.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lanParty" beforeDir="false" afterPath="$PROJECT_DIR$/lanParty" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/liste.c" beforeDir="false" afterPath="$PROJECT_DIR$/liste.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/r.out" beforeDir="false" afterPath="$PROJECT_DIR$/r.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stive.c" beforeDir="false" afterPath="$PROJECT_DIR$/stive.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stive.h" beforeDir="false" afterPath="$PROJECT_DIR$/stive.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +123,7 @@
       <workItem from="1684438764377" duration="1140000" />
       <workItem from="1684940536907" duration="19758000" />
       <workItem from="1685011107351" duration="7503000" />
-      <workItem from="1685018714393" duration="6620000" />
+      <workItem from="1685018714393" duration="8018000" />
     </task>
     <servers />
   </component>

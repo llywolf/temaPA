@@ -46,7 +46,7 @@ void displayPlayers(PLAYER *head) {
     }
 }
 
-void deleteTeam(TEAM** team){
+void deleteTeams(TEAM** team){
     if(team == NULL){
         printf("\n eroare memorie echipa");
         exit(1);
@@ -146,13 +146,15 @@ TEAM *initTeams(FILE *in) {
                         num = num * 10 + buffer[j] - '0';
                     }
                 }
-                int newLen = len - 3; // pt nume
+                int newLen = len - 2; // pt nume
                 newLen = alocName(&name, newLen, num, buffer);
                 char *fName = NULL, *sName = NULL;
                 separateName(newLen, name, &fName, &sName);
                 addPlayer(&players, fName, sName, num);
                 free3strings(name, fName, sName);       // pt functie cu max 40 de linii de cod
             }
+            if(teamName[strlen(teamName) - 1] == ' ')
+                teamName[strlen(teamName) - 1] = '\0';
             addTeam(&team, teamName, nrMembrii, players);
             free(teamName);
             players = NULL;
@@ -233,5 +235,22 @@ void deleteTeamSurplus(TEAM** team, int nrEchipe, int nrMaxEchipe){
             free(copy);
             copy = *team;
         }
+    }
+}
+
+int calcNrEchipe(TEAM* head){
+    int nr = 0;
+    while(head != NULL){
+        nr++;
+        head = head->next;
+    }
+    return nr;
+}
+
+void scoreUpdate(TEAM** head){
+    PLAYER *update = (*head)->members->playerHead;
+    while (update != NULL) {
+        update->points++;
+        update = update->next;
     }
 }

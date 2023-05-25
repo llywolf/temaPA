@@ -8,10 +8,10 @@ QUEUE* createQueue() {
     return q;
 }
 
-void enQueue(QUEUE* q, TEAM* firstTeam, TEAM* secondTeam){
+void enQueue(QUEUE* q, TEAM** firstTeam, TEAM** secondTeam){
     MATCH *newNode = (MATCH *)malloc(sizeof(MATCH));
-    newNode->firstTeam = firstTeam;
-    newNode->secondTeam = secondTeam;
+    newNode->firstTeam = *firstTeam;
+    newNode->secondTeam = *secondTeam;
     newNode->next = NULL;
     if (q->rear == NULL )
         q->rear = newNode ;
@@ -30,13 +30,40 @@ void deQueue (QUEUE *q, TEAM** win, TEAM** lose){
     MATCH *aux;
     aux = q->front;
     q->front = q->front->next;
-    if(aux->secondTeam->points > aux->firstTeam->points) {
+    if(aux->secondTeam->points >= aux->firstTeam->points) {
         *win = aux->secondTeam;
         *lose = aux->firstTeam;
     }
-    else{//daca sunt egale intra tot pe a 2a ramura
+    else{
         *win = aux->firstTeam;
         *lose = aux->secondTeam;
     }
-    free(aux);
+}
+
+void deleteTeam(TEAM** team){
+    if(team == NULL){
+        printf("\n eroare memorie echipa");
+        exit(1);
+    }
+    TEAM* copy = *team;
+    free(copy->name);
+    while (copy->members->playerHead != NULL && copy->members != NULL) {
+        PLAYER *prev = copy->members->playerHead;
+        copy->members->playerHead = copy->members->playerHead->next;
+        free(prev->firstName);
+        free(prev->secondName);
+        free(prev);
+    }
+    free(copy->members);
+    free(copy);
+}
+
+void deleteQueue(QUEUE *q){
+    MATCH *aux;
+    while(q->front != NULL){
+        aux = q->front;
+        q->front = q->front->next;
+        free(aux);
+    }
+    free(q);
 }

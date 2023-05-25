@@ -1,7 +1,7 @@
-CMakeFiles/tema1PA.dir/liste.c.o: \
- /mnt/c/Users/carag/CLionProjects/tema1PA/liste.c \
+CMakeFiles/tema1PA.dir/cozi.c.o: \
+ /mnt/c/Users/carag/CLionProjects/tema1PA/cozi.c \
  /usr/include/stdc-predef.h \
- /mnt/c/Users/carag/CLionProjects/tema1PA/liste.h \
+ /mnt/c/Users/carag/CLionProjects/tema1PA/cozi.h \
  /mnt/c/Users/carag/CLionProjects/tema1PA/structuri.h \
  /usr/include/stdlib.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \

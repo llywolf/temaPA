@@ -7,7 +7,7 @@ void addTeamBeginning(TEAM **head, char* teamName, int teamMembers, PLAYER *play
 void addPlayerBeginning(PLAYER **head, char* playerFirstName, char* playerSecondName, int playerPoints);
 void displayTeam(TEAM *head);
 void displayPlayers(PLAYER *head);
-void deleteTeam(TEAM **team);
+void deleteTeams(TEAM **team);
 TEAM* initTeams(FILE* in);
 int alocName(char** name, int newLen, int num, char buffer[100]);
 void separateName(int newLen, char *name, char** fName, char** sName);
@@ -16,5 +16,7 @@ void free3strings(char* name, char* fName, char* sName);
 void getScore(TEAM** team);
 void deletePlayers(TEAM** team);
 void deleteTeamSurplus(TEAM** team, int nrEchipe, int nrMaxEchipe);
+int calcNrEchipe(TEAM* head);
+void scoreUpdate(TEAM** head);
 
 #endif

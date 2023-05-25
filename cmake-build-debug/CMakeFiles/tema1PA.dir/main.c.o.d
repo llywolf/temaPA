@@ -1,7 +1,8 @@
 CMakeFiles/tema1PA.dir/main.c.o: \
  /mnt/c/Users/carag/CLionProjects/tema1PA/main.c \
  /usr/include/stdc-predef.h \
- /mnt/c/Users/carag/CLionProjects/tema1PA/liste.h /usr/include/stdlib.h \
+ /mnt/c/Users/carag/CLionProjects/tema1PA/structuri.h \
+ /usr/include/stdlib.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
@@ -51,4 +52,6 @@ CMakeFiles/tema1PA.dir/main.c.o: \
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h /usr/include/string.h \
  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
- /usr/include/strings.h
+ /usr/include/strings.h /mnt/c/Users/carag/CLionProjects/tema1PA/liste.h \
+ /mnt/c/Users/carag/CLionProjects/tema1PA/stive.h \
+ /mnt/c/Users/carag/CLionProjects/tema1PA/cozi.h

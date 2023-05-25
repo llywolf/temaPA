@@ -4,7 +4,9 @@
 #include "structuri.h"
 
 QUEUE* createQueue();
-void enQueue(QUEUE* q, TEAM* firstTeam, TEAM* secondTeam);
+void enQueue(QUEUE* q, TEAM** firstTeam, TEAM** secondTeam);
 void deQueue (QUEUE *q, TEAM** win, TEAM** lose);
+void deleteTeam(TEAM** team);
+void deleteQueue(QUEUE *q);
 
 #endif

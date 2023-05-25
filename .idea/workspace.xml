@@ -23,28 +23,75 @@
   <component name="ChangeListManager">
     <list default="true" id="8c7027b4-c0e9-4515-a395-3b69005ba5e0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cache-v2-5eceacb56d8779315dfb.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-8f010007ba1a4b6f0d6d.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tema1PA.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tema1PA.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tema1PA.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tema1PA.dir/compiler_depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tema1PA.dir/liste.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tema1PA.dir/liste.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tema1PA.dir/liste.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tema1PA.dir/liste.c.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tema1PA.dir/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tema1PA.dir/main.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tema1PA.dir/main.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tema1PA.dir/main.c.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/tema1PA" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/tema1PA" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/untitled6.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/untitled6.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozi.c" beforeDir="false" afterPath="$PROJECT_DIR$/cozi.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozi.h" beforeDir="false" afterPath="$PROJECT_DIR$/cozi.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/t1/d.in" beforeDir="false" afterPath="$PROJECT_DIR$/date/t1/d.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/t10/c.in" beforeDir="false" afterPath="$PROJECT_DIR$/date/t10/c.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/t10/d.in" beforeDir="false" afterPath="$PROJECT_DIR$/date/t10/d.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/t11/c.in" beforeDir="false" afterPath="$PROJECT_DIR$/date/t11/c.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/t11/d.in" beforeDir="false" afterPath="$PROJECT_DIR$/date/t11/d.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/t12/c.in" beforeDir="false" afterPath="$PROJECT_DIR$/date/t12/c.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/t12/d.in" beforeDir="false" afterPath="$PROJECT_DIR$/date/t12/d.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/t13/d.in" beforeDir="false" afterPath="$PROJECT_DIR$/date/t13/d.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/t14/d.in" beforeDir="false" afterPath="$PROJECT_DIR$/date/t14/d.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/t15/d.in" beforeDir="false" afterPath="$PROJECT_DIR$/date/t15/d.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/t2/d.in" beforeDir="false" afterPath="$PROJECT_DIR$/date/t2/d.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/t3/c.in" beforeDir="false" afterPath="$PROJECT_DIR$/date/t3/c.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/t3/d.in" beforeDir="false" afterPath="$PROJECT_DIR$/date/t3/d.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/t4/c.in" beforeDir="false" afterPath="$PROJECT_DIR$/date/t4/c.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/t4/d.in" beforeDir="false" afterPath="$PROJECT_DIR$/date/t4/d.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/t5/c.in" beforeDir="false" afterPath="$PROJECT_DIR$/date/t5/c.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/t5/d.in" beforeDir="false" afterPath="$PROJECT_DIR$/date/t5/d.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/t6/c.in" beforeDir="false" afterPath="$PROJECT_DIR$/date/t6/c.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/t6/d.in" beforeDir="false" afterPath="$PROJECT_DIR$/date/t6/d.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/t7/c.in" beforeDir="false" afterPath="$PROJECT_DIR$/date/t7/c.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/t7/d.in" beforeDir="false" afterPath="$PROJECT_DIR$/date/t7/d.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/t8/c.in" beforeDir="false" afterPath="$PROJECT_DIR$/date/t8/c.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/t8/d.in" beforeDir="false" afterPath="$PROJECT_DIR$/date/t8/d.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/t9/c.in" beforeDir="false" afterPath="$PROJECT_DIR$/date/t9/c.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/t9/d.in" beforeDir="false" afterPath="$PROJECT_DIR$/date/t9/d.in" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lanParty" beforeDir="false" afterPath="$PROJECT_DIR$/lanParty" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/liste.c" beforeDir="false" afterPath="$PROJECT_DIR$/liste.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/liste.h" beforeDir="false" afterPath="$PROJECT_DIR$/liste.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liste.o" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/out1.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/out1.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/out10.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/out10.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/out11.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/out11.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/out12.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/out12.out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/out13.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/out13.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/out14.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/out14.out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/out15.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/out15.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/out2.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/out2.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/out3.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/out3.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/out4.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/out4.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/out5.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/out5.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/out6.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/out6.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/out7.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/out7.out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/out8.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/out8.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/out9.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/out9.out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/r.out" beforeDir="false" afterPath="$PROJECT_DIR$/r.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rezultate/r1.out" beforeDir="false" afterPath="$PROJECT_DIR$/rezultate/r1.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rezultate/r10.out" beforeDir="false" afterPath="$PROJECT_DIR$/rezultate/r10.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rezultate/r11.out" beforeDir="false" afterPath="$PROJECT_DIR$/rezultate/r11.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rezultate/r12.out" beforeDir="false" afterPath="$PROJECT_DIR$/rezultate/r12.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rezultate/r13.out" beforeDir="false" afterPath="$PROJECT_DIR$/rezultate/r13.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rezultate/r14.out" beforeDir="false" afterPath="$PROJECT_DIR$/rezultate/r14.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rezultate/r15.out" beforeDir="false" afterPath="$PROJECT_DIR$/rezultate/r15.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rezultate/r2.out" beforeDir="false" afterPath="$PROJECT_DIR$/rezultate/r2.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rezultate/r3.out" beforeDir="false" afterPath="$PROJECT_DIR$/rezultate/r3.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rezultate/r4.out" beforeDir="false" afterPath="$PROJECT_DIR$/rezultate/r4.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rezultate/r5.out" beforeDir="false" afterPath="$PROJECT_DIR$/rezultate/r5.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rezultate/r6.out" beforeDir="false" afterPath="$PROJECT_DIR$/rezultate/r6.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rezultate/r7.out" beforeDir="false" afterPath="$PROJECT_DIR$/rezultate/r7.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rezultate/r8.out" beforeDir="false" afterPath="$PROJECT_DIR$/rezultate/r8.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rezultate/r9.out" beforeDir="false" afterPath="$PROJECT_DIR$/rezultate/r9.out" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +126,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/carag/CLionProjects/tema1PA&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/carag/CLionProjects/tema1PA/rezultate/r7.out&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -87,15 +134,11 @@
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;CPPToolchains&quot;,
     &quot;structure.view.defaults.are.configured&quot;: &quot;true&quot;,
+    &quot;two.files.diff.last.used.file&quot;: &quot;C:/Users/carag/CLionProjects/tema1PA/rezultate/r7.out&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="tema1PA" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="untitled6" TARGET_NAME="tema1PA" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="untitled6" RUN_TARGET_NAME="tema1PA">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -138,7 +181,12 @@
       <workItem from="1684082440771" duration="1231000" />
       <workItem from="1684083713182" duration="11671000" />
       <workItem from="1684173533975" duration="3049000" />
-      <workItem from="1684333533451" duration="17294000" />
+      <workItem from="1684333533451" duration="17377000" />
+      <workItem from="1684421851716" duration="13541000" />
+      <workItem from="1684438764377" duration="1140000" />
+      <workItem from="1684940536907" duration="19758000" />
+      <workItem from="1685011107351" duration="7503000" />
+      <workItem from="1685018714393" duration="952000" />
     </task>
     <servers />
   </component>

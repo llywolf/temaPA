@@ -66,12 +66,6 @@ int main(int argc, char *argv[]) {
                 aux = aux->next;
             }
         }
-        /*else{
-            aux = teams->teamHead;
-            while (aux != NULL) {
-                fprintf(out, "%s\n", aux->name);
-                aux = aux->next;
-        }*/
     }
     //------------------------------------TASK 3-------------------------------------
     if (check[2] == '1') {
@@ -117,7 +111,7 @@ int main(int argc, char *argv[]) {
                 if (auxStack == aux) {
                     teams->teamHead = teams->teamHead->next;
                     aux = teams->teamHead;
-                    //deleteTeam(&auxStack);
+                    deleteTeam(&auxStack);
                     auxStack = NULL;
                 }
                 else if (auxStack != NULL) {
@@ -128,7 +122,7 @@ int main(int argc, char *argv[]) {
                         }
                     }
                     aux->next = auxStack->next;
-                    //deleteTeam(&auxStack);
+                    deleteTeam(&auxStack);
                     auxStack = NULL;
                 }
             }
@@ -136,7 +130,7 @@ int main(int argc, char *argv[]) {
             fprintf(out, "\n\nWINNERS OF ROUND NO:%d", round);
             aux = teams->teamHead;
             if (queue != NULL) {
-                //deleteQueue(queue);
+                deleteQueue(queue);
             }
             queue = createQueue();
             while (winners != NULL) {
@@ -146,7 +140,7 @@ int main(int argc, char *argv[]) {
                     scoreUpdate(&finalWinner);
                     getScore(&finalWinner);
                     teams->teamHead = finalWinner;
-                    //deleteQueue(queue);
+                    deleteQueue(queue);
                     fprintf(out, "\n%-32s  -  %.2f",finalWinner->name, finalWinner->points);
                     break;
                 }
@@ -168,9 +162,9 @@ int main(int argc, char *argv[]) {
 
 //eliberare de memorie
     TEAM *toDelete = teams->teamHead;
-    //deleteTeams(&toDelete);
+    deleteTeams(&toDelete);
     toDelete = NULL;
-    //free(teams);
+    free(teams);
     free(check);
 //inchidere fisiere
     fclose(in);

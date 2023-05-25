@@ -212,10 +212,10 @@ void deleteTeamSurplus(TEAM** team, int nrEchipe, int nrMaxEchipe){
         copy = *team;
         if (copy != NULL && min == copy->points) {        //cazul pt scor minim la capul listei
             *team = (*team)->next;
-            copy = NULL;
-//            free(copy->name);
-//            deletePlayers(&copy);
-//            free(copy);
+            //copy = NULL;
+            free(copy->name);
+            deletePlayers(&copy);
+            free(copy);
             copy = *team;
             nrEchipe--;
         }
@@ -229,9 +229,9 @@ void deleteTeamSurplus(TEAM** team, int nrEchipe, int nrMaxEchipe){
                 return;
             }
             prev->next = copy->next;
-//            free(copy->name);
-//            deletePlayers(&copy);
-//            free(copy);
+            free(copy->name);
+            deletePlayers(&copy);
+            free(copy);
             copy = *team;
 
             nrEchipe--;

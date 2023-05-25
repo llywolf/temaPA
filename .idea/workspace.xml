@@ -23,14 +23,9 @@
   <component name="ChangeListManager">
     <list default="true" id="8c7027b4-c0e9-4515-a395-3b69005ba5e0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/date/t8/d.in" beforeDir="false" afterPath="$PROJECT_DIR$/date/t8/d.in" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lanParty" beforeDir="false" afterPath="$PROJECT_DIR$/lanParty" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/liste.c" beforeDir="false" afterPath="$PROJECT_DIR$/liste.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/out12.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/out12.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/out14.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/out14.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/out8.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/out8.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/out9.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/out9.out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/r.out" beforeDir="false" afterPath="$PROJECT_DIR$/r.out" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,7 +61,7 @@
     "WebServerToolWindowFactoryState": "false",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
-    "last_opened_file_path": "C:/Users/carag/CLionProjects/tema1PA/rezultate/r8.out",
+    "last_opened_file_path": "C:/Users/carag/CLionProjects/tema1PA/rezultate/r7.out",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -74,7 +69,7 @@
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "CPPToolchains",
     "structure.view.defaults.are.configured": "true",
-    "two.files.diff.last.used.file": "C:/Users/carag/CLionProjects/tema1PA/rezultate/r8.out",
+    "two.files.diff.last.used.file": "C:/Users/carag/CLionProjects/tema1PA/rezultate/r7.out",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -126,7 +121,7 @@
       <workItem from="1684438764377" duration="1140000" />
       <workItem from="1684940536907" duration="19758000" />
       <workItem from="1685011107351" duration="7503000" />
-      <workItem from="1685018714393" duration="5112000" />
+      <workItem from="1685018714393" duration="6620000" />
     </task>
     <servers />
   </component>

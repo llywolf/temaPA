@@ -132,7 +132,7 @@ TEAM *initTeams(FILE *in) {
         if (buffer[0] <= '9' && buffer[0] >= '1') {      //inregistrarea echipei
             num = strtol(buffer, &endPtr, 10);
             len = strlen(endPtr) - 2;     //endPtr o sa fie numele echipei(din cauza lui strtol) | - 2 pt cifra si spatiu
-            char* teamName = malloc((len) * sizeof(char));        // len+1 pt '\0'
+            char* teamName = malloc((len + 1) * sizeof(char));        // len+1 pt '\0'
             memmove(teamName, endPtr + 1, len * sizeof(char));      // endPtr ramane la spatiu deci mai trebuie + 1
             teamName[len] = '\0';
             int nrMembrii = num;
@@ -203,7 +203,6 @@ void deleteTeamSurplus(TEAM** team, int nrEchipe, int nrMaxEchipe){
     TEAM *prev = copy;
     while(nrEchipe > nrMaxEchipe){
         float min = copy->points;     //calculez scorul minimul
-       // printf("\n");
         while (copy != NULL) {
             if (min > copy->points) {
                 min = copy->points;
@@ -213,9 +212,10 @@ void deleteTeamSurplus(TEAM** team, int nrEchipe, int nrMaxEchipe){
         copy = *team;
         if (copy != NULL && min == copy->points) {        //cazul pt scor minim la capul listei
             *team = (*team)->next;
-            free(copy->name);
-            deletePlayers(&copy);
-            free(copy);
+            copy = NULL;
+//            free(copy->name);
+//            deletePlayers(&copy);
+//            free(copy);
             copy = *team;
             nrEchipe--;
         }
@@ -229,11 +229,12 @@ void deleteTeamSurplus(TEAM** team, int nrEchipe, int nrMaxEchipe){
                 return;
             }
             prev->next = copy->next;
-            free(copy->name);
-            deletePlayers(&copy);
-            nrEchipe--;
-            free(copy);
+//            free(copy->name);
+//            deletePlayers(&copy);
+//            free(copy);
             copy = *team;
+
+            nrEchipe--;
         }
     }
 }

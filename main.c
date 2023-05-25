@@ -28,7 +28,7 @@ int main(int argc, char *argv[]) {
 
     }
     int nrEchipe;
-    fscanf(in, "%d ", &nrEchipe);       //numarul de echipe se afla pe primul rand
+    fscanf(in, "%d  ", &nrEchipe);       //numarul de echipe se afla pe primul rand
     TEAMLIST *teams = NULL;
     TEAM *aux = NULL;
     //alocari de memorie
@@ -42,13 +42,12 @@ int main(int argc, char *argv[]) {
             fprintf(out, "%s\n", aux->name);
             aux = aux->next;
         }
-        //displayTeam(teams->teamHead);
     }
     //------------------------------------TASK 2-------------------------------------
     if (check[1] == '1') {
         getScore(&teams->teamHead);
         int nrMaxEchipe = 1;
-        for (int i = 2; nrEchipe > nrMaxEchipe; i++)     //nr maxim de echipe
+        for (int i = 2; nrEchipe >= nrMaxEchipe; i++)     //nr maxim de echipe
         {
             nrMaxEchipe *= 2;
         }
@@ -67,6 +66,12 @@ int main(int argc, char *argv[]) {
                 aux = aux->next;
             }
         }
+        /*else{
+            aux = teams->teamHead;
+            while (aux != NULL) {
+                fprintf(out, "%s\n", aux->name);
+                aux = aux->next;
+        }*/
     }
     //------------------------------------TASK 3-------------------------------------
     if (check[2] == '1') {
@@ -94,6 +99,10 @@ int main(int argc, char *argv[]) {
             }
             aux = teams->teamHead;
             while (queue->front != NULL) {
+                if(queue->front->firstTeam->name[strlen(queue->front->firstTeam->name) - 1] == ' ')
+                    queue->front->firstTeam->name[strlen(queue->front->firstTeam->name) - 1] = '\0';
+                if(queue->front->secondTeam->name[strlen(queue->front->secondTeam->name) - 1] == ' ')
+                    queue->front->secondTeam->name[strlen(queue->front->secondTeam->name) - 1] = '\0';
                 fprintf(out, "\n%-32s - %+32s", queue->front->firstTeam->name, queue->front->secondTeam->name);
                 TEAM *winnerTeam = NULL, *loserTeam = NULL;
                 deQueue(queue, &winnerTeam, &loserTeam);
@@ -108,7 +117,8 @@ int main(int argc, char *argv[]) {
                 if (auxStack == aux) {
                     teams->teamHead = teams->teamHead->next;
                     aux = teams->teamHead;
-                    deleteTeam(&auxStack);
+                    //deleteTeam(&auxStack);
+                    auxStack = NULL;
                 }
                 else if (auxStack != NULL) {
                     aux = teams->teamHead;
@@ -118,17 +128,17 @@ int main(int argc, char *argv[]) {
                         }
                     }
                     aux->next = auxStack->next;
-                    deleteTeam(&auxStack);
+                    //deleteTeam(&auxStack);
+                    auxStack = NULL;
                 }
             }
 
             fprintf(out, "\n\nWINNERS OF ROUND NO:%d", round);
             aux = teams->teamHead;
             if (queue != NULL) {
-                deleteQueue(queue);
+                //deleteQueue(queue);
             }
             queue = createQueue();
-            //enQueue le baga inversat ca e stiva
             while (winners != NULL) {
                 TEAM *winner = pop(&winners);
                 if(winners == NULL) {

@@ -22,28 +22,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8c7027b4-c0e9-4515-a395-3b69005ba5e0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lanParty" beforeDir="false" afterPath="$PROJECT_DIR$/lanParty" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liste.c" beforeDir="false" afterPath="$PROJECT_DIR$/liste.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liste.h" beforeDir="false" afterPath="$PROJECT_DIR$/liste.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/out1.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/out1.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/out10.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/out10.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/out11.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/out11.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/out12.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/out12.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/out13.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/out13.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/out14.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/out14.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/out15.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/out15.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/out2.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/out2.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/out3.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/out3.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/out4.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/out4.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/out5.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/out5.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/out6.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/out6.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/out7.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/out7.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/out8.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/out8.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/out9.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/out9.out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/r.out" beforeDir="false" afterPath="$PROJECT_DIR$/r.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stive.c" beforeDir="false" afterPath="$PROJECT_DIR$/stive.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +120,7 @@
       <workItem from="1684940536907" duration="19758000" />
       <workItem from="1685011107351" duration="7503000" />
       <workItem from="1685018714393" duration="9840000" />
-      <workItem from="1685121570075" duration="12328000" />
+      <workItem from="1685121570075" duration="12597000" />
     </task>
     <servers />
   </component>

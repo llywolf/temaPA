@@ -93,9 +93,10 @@ void thirdTask(TEAM* aux, TEAMLIST** teams, FILE* out, TEAMLIST** firstEight){
     }
 }
 
-void freeMemory(TEAMLIST** teams, char* check){
+void freeMemory(TEAMLIST** teams, char* check, TEAMLIST** firstEight){
     TEAM *toDelete = (*teams)->teamHead;
     deleteTeams(&toDelete);
+    deleteTeams(&(*firstEight)->teamHead);
     toDelete = NULL;
     free(*teams);
     free(check);
@@ -132,8 +133,7 @@ int main(int argc, char *argv[]) {
     //------------------------------------TASK 3-------------------------------------
     if (check[2] == '1')
         thirdTask(aux, &teams, out, &firstEight);
-    //displayTeam(firstEight->teamHead);
-    freeMemory(&teams, check);      //eliberare de memorie
+    freeMemory(&teams, check, &firstEight);      //eliberare de memorie
     closeFiles(&checker, &in ,&out);        //inchidere fisiere
     return 0;
 }

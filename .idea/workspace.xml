@@ -24,8 +24,26 @@
     <list default="true" id="8c7027b4-c0e9-4515-a395-3b69005ba5e0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lanParty" beforeDir="false" afterPath="$PROJECT_DIR$/lanParty" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liste.c" beforeDir="false" afterPath="$PROJECT_DIR$/liste.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liste.h" beforeDir="false" afterPath="$PROJECT_DIR$/liste.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/out1.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/out1.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/out10.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/out10.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/out11.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/out11.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/out12.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/out12.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/out13.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/out13.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/out14.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/out14.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/out15.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/out15.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/out2.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/out2.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/out3.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/out3.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/out4.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/out4.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/out5.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/out5.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/out6.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/out6.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/out7.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/out7.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/out8.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/out8.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/out9.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/out9.out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/r.out" beforeDir="false" afterPath="$PROJECT_DIR$/r.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stive.c" beforeDir="false" afterPath="$PROJECT_DIR$/stive.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,25 +71,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "last_opened_file_path": "C:/Users/carag/CLionProjects/tema1PA/rezultate/r7.out",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "CPPToolchains",
-    "structure.view.defaults.are.configured": "true",
-    "two.files.diff.last.used.file": "C:/Users/carag/CLionProjects/tema1PA/rezultate/r7.out",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/carag/CLionProjects/tema1PA/rezultate/r7.out&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;CPPToolchains&quot;,
+    &quot;structure.view.defaults.are.configured&quot;: &quot;true&quot;,
+    &quot;two.files.diff.last.used.file&quot;: &quot;C:/Users/carag/CLionProjects/tema1PA/rezultate/r7.out&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="tema1PA" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="untitled6" TARGET_NAME="tema1PA" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="untitled6" RUN_TARGET_NAME="tema1PA">
       <method v="2">
@@ -120,7 +138,8 @@
       <workItem from="1684438764377" duration="1140000" />
       <workItem from="1684940536907" duration="19758000" />
       <workItem from="1685011107351" duration="7503000" />
-      <workItem from="1685018714393" duration="9615000" />
+      <workItem from="1685018714393" duration="9840000" />
+      <workItem from="1685121570075" duration="12328000" />
     </task>
     <servers />
   </component>

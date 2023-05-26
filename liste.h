@@ -18,5 +18,11 @@ void deletePlayers(TEAM** team);
 void deleteTeamSurplus(TEAM** team, int nrEchipe, int nrMaxEchipe);
 int calcNrEchipe(TEAM* head);
 void scoreUpdate(TEAM** head);
+PLAYER* copyPlayers(PLAYER* head);
+TEAM* recordFirstEight(TEAMLIST** head);
+void updateFirstEight(TEAMLIST** leaderBoardHead, TEAMLIST** head);
+char *strdup(const char *c);
+void buildLeaderBoard(int nrNouEchipe, TEAMLIST** firstEight, TEAMLIST** teams);
+
 
 #endif

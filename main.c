@@ -21,13 +21,6 @@ void openFiles(FILE** checker, FILE** out, FILE** in, char* argv[]){
     }
 }
 
-void updateName(char* fName, char* sName){
-    if(fName[strlen(fName) - 1] == ' ')
-        fName[strlen(fName) - 1] = '\0';
-    if(sName[strlen(sName) - 1] == ' ')
-        sName[strlen(sName) - 1] = '\0';
-}
-
 void firstTask(TEAMLIST** teams, FILE* in, TEAM* aux, FILE* out){
     (*teams)->teamHead = initTeams(in);
     fseek(in, 0, 0);
@@ -41,8 +34,7 @@ void firstTask(TEAMLIST** teams, FILE* in, TEAM* aux, FILE* out){
 void secondTask(TEAMLIST** teams, TEAM* aux, FILE* out, int nrEchipe, char* argv[]){
     getScore(&(*teams)->teamHead);
     int nrMaxEchipe = 1;
-    for (int i = 2; nrEchipe >= nrMaxEchipe; i++)     //nr maxim de echipe
-    {
+    for (int i = 2; nrEchipe >= nrMaxEchipe; i++){     //nr maxim de echipe
         nrMaxEchipe *= 2;
     }
     nrMaxEchipe /= 2;
@@ -62,7 +54,7 @@ void secondTask(TEAMLIST** teams, TEAM* aux, FILE* out, int nrEchipe, char* argv
     }
 }
 
-void thirdTask(TEAM* aux, TEAMLIST** teams, FILE* out){
+void thirdTask(TEAM* aux, TEAMLIST** teams, FILE* out, TEAMLIST** firstEight){
     aux = (*teams)->teamHead;
     TEAM* finalWinner = NULL;
     int round = 0, onetime = 1, nrNouEchipe = calcNrEchipe(aux);
@@ -75,8 +67,6 @@ void thirdTask(TEAM* aux, TEAMLIST** teams, FILE* out){
         if(onetime==1) {
             queue = createQueue();
             while (aux != NULL) {
-                (aux->name)[strlen(aux->name) - 1] = '\0';
-                (aux->next->name)[strlen(aux->next->name) - 1] = '\0';
                 enQueue(queue, &aux, &aux->next);
                 aux = aux->next->next;
             }
@@ -84,7 +74,6 @@ void thirdTask(TEAM* aux, TEAMLIST** teams, FILE* out){
         }
         aux = (*teams)->teamHead;
         while (queue->front != NULL) {
-            updateName(queue->front->firstTeam->name,queue->front->secondTeam->name);
             fprintf(out, "\n%-32s - %+32s", queue->front->firstTeam->name, queue->front->secondTeam->name);
             TEAM *winnerTeam = NULL, *loserTeam = NULL;
             deQueue(queue, &winnerTeam, &loserTeam);
@@ -100,6 +89,7 @@ void thirdTask(TEAM* aux, TEAMLIST** teams, FILE* out){
         fprintf(out, "\n");
         aux = (*teams)->teamHead;
         nrNouEchipe/=2;
+        buildLeaderBoard(nrNouEchipe, firstEight, teams);
     }
 }
 
@@ -117,22 +107,22 @@ void closeFiles(FILE** checker, FILE** in, FILE** out){
     fclose(*checker);
 }
 
+
 int main(int argc, char *argv[]) {
     //deschidere fisiere
     FILE *checker, *in, *out;
     openFiles(&checker, &out, &in, argv);
     //fac datele din checker un vector
     char *check = malloc(5 * sizeof(char));
-    for (int i = 0; i < 5; i++) {
+    for (int i = 0; i < 5; i++)
         fscanf(checker, "%c ", &check[i]);
-
-    }
     int nrEchipe;
     fscanf(in, "%d  ", &nrEchipe);       //numarul de echipe se afla pe primul rand
-    TEAMLIST *teams = NULL;
+    TEAMLIST *teams = NULL, *firstEight = NULL;
     TEAM *aux = NULL;
     //alocari de memorie
     teams = malloc(sizeof(TEAMLIST));
+    firstEight = malloc(sizeof(TEAMLIST));
     //------------------------------------TASK 1-------------------------------------
     if (check[0] == '1')
         firstTask(&teams, in, aux, out);
@@ -141,10 +131,9 @@ int main(int argc, char *argv[]) {
         secondTask(&teams, aux, out, nrEchipe, argv);
     //------------------------------------TASK 3-------------------------------------
     if (check[2] == '1')
-        thirdTask(aux, &teams, out);
-//eliberare de memorie
-    freeMemory(&teams, check);
-//inchidere fisiere
-    closeFiles(&checker, &in ,&out);
+        thirdTask(aux, &teams, out, &firstEight);
+    //displayTeam(firstEight->teamHead);
+    freeMemory(&teams, check);      //eliberare de memorie
+    closeFiles(&checker, &in ,&out);        //inchidere fisiere
     return 0;
 }

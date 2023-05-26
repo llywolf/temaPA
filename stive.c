@@ -24,8 +24,8 @@ void deleteLosers(STACK *losers, TEAM** teams){
         TEAM *auxStack = pop(&losers);
         aux = copy;
         if (auxStack == aux) {
-            copy = copy->next;
-            aux = copy;
+            *teams = (*teams)->next;
+            copy = *teams;
             deleteTeam(&auxStack);
             auxStack = NULL;
         }
@@ -51,6 +51,7 @@ void updateWinners(STACK* winners, TEAM* finalWinner, TEAMLIST** teams, QUEUE* q
             scoreUpdate(&finalWinner);
             getScore(&finalWinner);
             (*teams)->teamHead = finalWinner;
+            (*teams)->teamHead->next = NULL;
             deleteQueue(queue);
             fprintf(out, "\n%-32s  -  %.2f", finalWinner->name, finalWinner->points);
             break;

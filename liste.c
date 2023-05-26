@@ -17,11 +17,11 @@ void addPlayerBeginning(PLAYER **head, char *playerFirstName, char *playerSecond
     PLAYER *newPlayer = malloc(sizeof(PLAYER));
     int lenFname = strlen(playerFirstName), lenSname = strlen(playerSecondName);
     newPlayer->firstName = malloc(sizeof(char) * (lenFname + 1));
-    newPlayer->secondName = malloc(sizeof(char) * (lenSname + 1));
+    newPlayer->secondName = malloc(sizeof(char) * (lenSname ));
     memmove(newPlayer->firstName, playerFirstName, lenFname);
-    memmove(newPlayer->secondName, playerSecondName, lenSname);
+    memmove(newPlayer->secondName, playerSecondName, lenSname - 1);
     newPlayer->firstName[lenFname] = '\0';
-    newPlayer->secondName[lenSname] = '\0';
+    newPlayer->secondName[lenSname - 1] = '\0';
     newPlayer->points = playerPoints;
     newPlayer->next = *head;
     *head = newPlayer;
@@ -30,7 +30,7 @@ void addPlayerBeginning(PLAYER **head, char *playerFirstName, char *playerSecond
 void displayTeam(TEAM *head) {
     TEAM* headCopy = head;
     while (headCopy != NULL) {
-        printf("\n%s-%f-%d", headCopy->name, headCopy->points, headCopy->nrMembers);
+        printf("\n%s-%.2f-%d", headCopy->name, headCopy->points, headCopy->nrMembers);
         printf("\n");
         displayPlayers(headCopy->members->playerHead);
         printf("\n--------------------------------------------");
@@ -88,10 +88,10 @@ void separateName(int newLen, char *name, char** fName, char** sName){
     for(j = 0; j < newLen; j++)
         if(name[j] == ' ')
             break;
-    *fName = malloc(sizeof(char) * (j));
+    *fName = malloc(sizeof(char) * (j + 1));
     memcpy(*fName, name, sizeof(char) * j);
     (*fName)[j] = '\0';
-    *sName = malloc(sizeof(char) * (newLen - j + 1));        // + 1 pt '\0'
+    *sName = malloc(sizeof(char) * (newLen - j + 2));        // + 1 pt '\0'
     memcpy(*sName, name + j + 1, newLen - j + 1);
     (*sName)[newLen - j + 1] = '\0';
 }
@@ -134,7 +134,8 @@ TEAM *initTeams(FILE *in) {
             len = strlen(endPtr) - 2;     //endPtr o sa fie numele echipei(din cauza lui strtol) | - 2 pt cifra si spatiu
             char* teamName = malloc((len + 1) * sizeof(char));        // len+1 pt '\0'
             memmove(teamName, endPtr + 1, len * sizeof(char));      // endPtr ramane la spatiu deci mai trebuie + 1
-            teamName[len] = '\0';
+            teamName[len] = '\0';       //in loc de \n
+            teamName[len - 1] = '\0';       // in loc ed \r
             int nrMembrii = num;
             for(int i = 0; i < nrMembrii; i++){     //pentru membrii
                 fgets(buffer, sizeof(buffer), in);
@@ -232,7 +233,6 @@ void deleteTeamSurplus(TEAM** team, int nrEchipe, int nrMaxEchipe){
             deletePlayers(&copy);
             free(copy);
             copy = *team;
-
             nrEchipe--;
         }
     }
@@ -252,5 +252,68 @@ void scoreUpdate(TEAM** head){
     while (update != NULL) {
         update->points++;
         update = update->next;
+    }
+}
+
+PLAYER* copyPlayers(PLAYER* head){
+    if (head == NULL) {
+        return NULL;
+    }
+    else {
+        PLAYER* newNode = (PLAYER*)malloc(sizeof(PLAYER));
+        newNode->points = head->points;
+        newNode->firstName = strdup(head->firstName);
+        newNode->secondName = strdup(head->secondName);
+        newNode->next = copyPlayers(head->next);
+        return newNode;
+    }
+}
+
+TEAM* recordFirstEight(TEAMLIST ** head){
+    TEAM* firstEight = NULL;
+    TEAM* auxHead = (*head)->teamHead;
+    char* name = NULL;
+    while(auxHead != NULL) {
+        PLAYER* copy = copyPlayers(auxHead->members->playerHead);
+        name = strdup(auxHead->name);
+        addTeam(&firstEight, name, auxHead->nrMembers, copy);
+        free(name);
+        auxHead = auxHead->next;
+    }
+    getScore(&firstEight);
+    return firstEight;
+}
+
+void updateFirstEight(TEAMLIST** leaderBoardHead, TEAMLIST** head){
+    TEAM* boardCopy = (*leaderBoardHead)->teamHead, *headCopy = NULL;
+    while(boardCopy != NULL) {
+        headCopy = (*head)->teamHead;
+        while(headCopy != NULL){
+            if(strcmp(boardCopy->name, headCopy->name) == 0) {
+                boardCopy->points = headCopy->points;
+                break;
+            }
+            headCopy = headCopy->next;
+        }
+        boardCopy = boardCopy->next;
+    }
+}
+
+char *strdup(const char *c)
+{
+    char *dup = malloc(strlen(c) + 1);
+
+    if (dup != NULL)
+        strcpy(dup, c);
+
+    return dup;
+}
+
+void buildLeaderBoard(int nrNouEchipe, TEAMLIST** firstEight, TEAMLIST** teams){
+    if(nrNouEchipe == 8) {
+        (*firstEight)->teamHead = recordFirstEight(teams);
+    }
+    else if(nrNouEchipe < 8){
+        updateFirstEight(firstEight, teams);
     }
 }

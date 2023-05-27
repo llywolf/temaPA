@@ -44,4 +44,9 @@ typedef struct Stack{
     struct Stack* next;
 }STACK;
 
+typedef struct Bst{
+    TEAM* team;
+    struct Bst *left, *right;
+}BST;
+
 #endif

@@ -2,6 +2,7 @@
 #include "liste.h"
 #include "stive.h"
 #include "cozi.h"
+#include "bst.h"
 
 void openFiles(FILE** checker, FILE** out, FILE** in, char* argv[]){
     *checker = fopen(/*c.in*/argv[1], "rt");
@@ -89,13 +90,29 @@ void thirdTask(TEAM* aux, TEAMLIST** teams, FILE* out, TEAMLIST** firstEight){
         fprintf(out, "\n");
         aux = (*teams)->teamHead;
         nrNouEchipe/=2;
-        buildLeaderBoard(nrNouEchipe, firstEight, teams);
+        if(nrNouEchipe == 8)
+            buildLeaderBoard(firstEight, teams);
     }
+}
+
+void fourthTask(TEAMLIST* firstEight, FILE* out){
+    TEAM* aux = firstEight->teamHead;
+    BST *root = initTree(&root, aux), *rootCopy = root;
+    aux = aux->next;
+    while(aux != NULL) {
+        root = insert(root, aux);
+        aux = aux->next;
+    }
+    fprintf(out, "\nTOP 8 TEAMS:");
+    printDescendingOrder(rootCopy, out);
+    deleteTree(root);
+    root = NULL;
 }
 
 void freeMemory(TEAMLIST** teams, char* check, TEAMLIST** firstEight){
     TEAM *toDelete = (*teams)->teamHead;
     deleteTeams(&toDelete);
+    if(check[3] == 0 && check[4] == 0)      //altfel se elibereaza aceeasi memorie de 2 ori
     deleteTeams(&(*firstEight)->teamHead);
     toDelete = NULL;
     free(*teams);
@@ -133,6 +150,8 @@ int main(int argc, char *argv[]) {
     //------------------------------------TASK 3-------------------------------------
     if (check[2] == '1')
         thirdTask(aux, &teams, out, &firstEight);
+    if(check[3] == '1')
+        fourthTask(firstEight, out);
     freeMemory(&teams, check, &firstEight);      //eliberare de memorie
     closeFiles(&checker, &in ,&out);        //inchidere fisiere
     return 0;

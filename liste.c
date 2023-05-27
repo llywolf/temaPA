@@ -302,18 +302,12 @@ void updateFirstEight(TEAMLIST** leaderBoardHead, TEAMLIST** head){
 char *strdup(const char *c)
 {
     char *dup = malloc(strlen(c) + 1);
-
     if (dup != NULL)
         strcpy(dup, c);
-
     return dup;
 }
 
-void buildLeaderBoard(int nrNouEchipe, TEAMLIST** firstEight, TEAMLIST** teams){
-    if(nrNouEchipe == 8) {
+void buildLeaderBoard(TEAMLIST** firstEight, TEAMLIST** teams){
         (*firstEight)->teamHead = recordFirstEight(teams);
-    }
-    else if(nrNouEchipe < 8){
-        updateFirstEight(firstEight, teams);
-    }
+
 }

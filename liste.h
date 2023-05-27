@@ -22,7 +22,7 @@ PLAYER* copyPlayers(PLAYER* head);
 TEAM* recordFirstEight(TEAMLIST** head);
 void updateFirstEight(TEAMLIST** leaderBoardHead, TEAMLIST** head);
 char *strdup(const char *c);
-void buildLeaderBoard(int nrNouEchipe, TEAMLIST** firstEight, TEAMLIST** teams);
+void buildLeaderBoard(TEAMLIST** firstEight, TEAMLIST** teams);
 
 
 #endif

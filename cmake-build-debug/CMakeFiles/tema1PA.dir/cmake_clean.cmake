@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/tema1PA.dir/bst.c.o"
+  "CMakeFiles/tema1PA.dir/bst.c.o.d"
   "CMakeFiles/tema1PA.dir/cozi.c.o"
   "CMakeFiles/tema1PA.dir/cozi.c.o.d"
   "CMakeFiles/tema1PA.dir/liste.c.o"

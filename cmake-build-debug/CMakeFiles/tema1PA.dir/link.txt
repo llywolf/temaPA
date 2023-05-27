@@ -1,1 +1,1 @@
-/usr/bin/cc -g CMakeFiles/tema1PA.dir/main.c.o CMakeFiles/tema1PA.dir/liste.c.o CMakeFiles/tema1PA.dir/stive.c.o CMakeFiles/tema1PA.dir/cozi.c.o -o tema1PA 
+/usr/bin/cc -g CMakeFiles/tema1PA.dir/main.c.o CMakeFiles/tema1PA.dir/liste.c.o CMakeFiles/tema1PA.dir/stive.c.o CMakeFiles/tema1PA.dir/cozi.c.o CMakeFiles/tema1PA.dir/bst.c.o -o tema1PA 

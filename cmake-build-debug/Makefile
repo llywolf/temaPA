@@ -129,6 +129,30 @@ tema1PA/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tema1PA.dir/build.make CMakeFiles/tema1PA.dir/build
 .PHONY : tema1PA/fast
 
+bst.o: bst.c.o
+.PHONY : bst.o
+
+# target to build an object file
+bst.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tema1PA.dir/build.make CMakeFiles/tema1PA.dir/bst.c.o
+.PHONY : bst.c.o
+
+bst.i: bst.c.i
+.PHONY : bst.i
+
+# target to preprocess a source file
+bst.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tema1PA.dir/build.make CMakeFiles/tema1PA.dir/bst.c.i
+.PHONY : bst.c.i
+
+bst.s: bst.c.s
+.PHONY : bst.s
+
+# target to generate assembly for a file
+bst.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tema1PA.dir/build.make CMakeFiles/tema1PA.dir/bst.c.s
+.PHONY : bst.c.s
+
 cozi.o: cozi.c.o
 .PHONY : cozi.o
 
@@ -234,6 +258,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... tema1PA"
+	@echo "... bst.o"
+	@echo "... bst.i"
+	@echo "... bst.s"
 	@echo "... cozi.o"
 	@echo "... cozi.i"
 	@echo "... cozi.s"

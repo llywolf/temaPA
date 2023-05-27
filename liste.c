@@ -1,4 +1,5 @@
 #include "liste.h"
+#include "cozi.h"
 
 void addTeamBeginning(TEAM **head, char *teamName, int teamMembers, PLAYER* players) {
     TEAM *newTeam = (TEAM *) malloc(sizeof(TEAM));
@@ -131,11 +132,10 @@ TEAM *initTeams(FILE *in) {
             continue;
         if (buffer[0] <= '9' && buffer[0] >= '1') {      //inregistrarea echipei
             num = strtol(buffer, &endPtr, 10);
-            len = strlen(endPtr) - 2;     //endPtr o sa fie numele echipei(din cauza lui strtol) | - 2 pt cifra si spatiu
+            len = strlen(endPtr) - 3;     //endPtr o sa fie numele echipei(din cauza lui strtol) | - 3 pt spatiu si \n\r
             char* teamName = malloc((len + 1) * sizeof(char));        // len+1 pt '\0'
             memmove(teamName, endPtr + 1, len * sizeof(char));      // endPtr ramane la spatiu deci mai trebuie + 1
-            teamName[len] = '\0';       //in loc de \n
-            teamName[len - 1] = '\0';       // in loc ed \r
+            teamName[len] = '\0';       // in loc de \n\r
             int nrMembrii = num;
             for(int i = 0; i < nrMembrii; i++){     //pentru membrii
                 fgets(buffer, sizeof(buffer), in);
@@ -213,9 +213,7 @@ void deleteTeamSurplus(TEAM** team, int nrEchipe, int nrMaxEchipe){
         copy = *team;
         if (copy != NULL && min == copy->points) {        //cazul pt scor minim la capul listei
             *team = (*team)->next;
-            free(copy->name);
-            deletePlayers(&copy);
-            free(copy);
+            deleteTeam(&copy);
             copy = *team;
             nrEchipe--;
         }
@@ -229,9 +227,7 @@ void deleteTeamSurplus(TEAM** team, int nrEchipe, int nrMaxEchipe){
                 return;
             }
             prev->next = copy->next;
-            free(copy->name);
-            deletePlayers(&copy);
-            free(copy);
+            deleteTeam(&copy);
             copy = *team;
             nrEchipe--;
         }
@@ -255,26 +251,26 @@ void scoreUpdate(TEAM** head){
     }
 }
 
-PLAYER* copyPlayers(PLAYER* head){
-    if (head == NULL) {
+PLAYER* copyPlayers(PLAYER** head){
+    if (*head == NULL) {
         return NULL;
     }
     else {
         PLAYER* newNode = (PLAYER*)malloc(sizeof(PLAYER));
-        newNode->points = head->points;
-        newNode->firstName = strdup(head->firstName);
-        newNode->secondName = strdup(head->secondName);
-        newNode->next = copyPlayers(head->next);
+        newNode->points = (*head)->points;
+        newNode->firstName = strdup((*head)->firstName);
+        newNode->secondName = strdup((*head)->secondName);
+        newNode->next = copyPlayers(&(*head)->next);
         return newNode;
     }
 }
 
-TEAM* recordFirstEight(TEAMLIST ** head){
+TEAM* recordFirstEight(TEAMLIST** head){
     TEAM* firstEight = NULL;
     TEAM* auxHead = (*head)->teamHead;
     char* name = NULL;
     while(auxHead != NULL) {
-        PLAYER* copy = copyPlayers(auxHead->members->playerHead);
+        PLAYER* copy = copyPlayers(&auxHead->members->playerHead);
         name = strdup(auxHead->name);
         addTeam(&firstEight, name, auxHead->nrMembers, copy);
         free(name);

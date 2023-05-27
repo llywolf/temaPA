@@ -38,6 +38,7 @@ void deQueue (QUEUE *q, TEAM** win, TEAM** lose){
         *win = aux->firstTeam;
         *lose = aux->secondTeam;
     }
+    free(aux);
 }
 
 void deleteTeam(TEAM** team){

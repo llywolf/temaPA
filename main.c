@@ -32,7 +32,7 @@ void firstTask(TEAMLIST** teams, FILE* in, TEAM* aux, FILE* out){
     }
 }
 
-void secondTask(TEAMLIST** teams, TEAM* aux, FILE* out, int nrEchipe, char* argv[]){
+void secondTask(TEAMLIST** teams, TEAM* aux, FILE** out, int nrEchipe, char* argv[]){
     getScore(&(*teams)->teamHead);
     int nrMaxEchipe = 1;
     for (int i = 2; nrEchipe >= nrMaxEchipe; i++){     //nr maxim de echipe
@@ -41,15 +41,15 @@ void secondTask(TEAMLIST** teams, TEAM* aux, FILE* out, int nrEchipe, char* argv
     nrMaxEchipe /= 2;
     if(nrMaxEchipe != nrEchipe) {
         deleteTeamSurplus(&(*teams)->teamHead, nrEchipe, nrMaxEchipe);
-        fclose(out);
-        out = fopen(/*r.out*/argv[3], "wt");
-        if (out == NULL) {
+        fclose(*out);
+        *out = fopen(/*r.out*/argv[3], "wt");
+        if (*out == NULL) {
             fprintf(stderr, "\nEroare deschidere fisier rezultate\n");
             exit(1);
         }
         aux = (*teams)->teamHead;
         while (aux != NULL) {
-            fprintf(out, "%s\n", aux->name);
+            fprintf(*out, "%s\n", aux->name);
             aux = aux->next;
         }
     }
@@ -110,12 +110,11 @@ void fourthTask(TEAMLIST* firstEight, FILE* out){
 }
 
 void freeMemory(TEAMLIST** teams, char* check, TEAMLIST** firstEight){
-    TEAM *toDelete = (*teams)->teamHead;
-    deleteTeams(&toDelete);
+    deleteTeams(&(*teams)->teamHead);
     if(check[3] == 0 && check[4] == 0)      //altfel se elibereaza aceeasi memorie de 2 ori
-    deleteTeams(&(*firstEight)->teamHead);
-    toDelete = NULL;
+        deleteTeams(&(*firstEight)->teamHead);
     free(*teams);
+    free(*firstEight);
     free(check);
 }
 
@@ -146,12 +145,13 @@ int main(int argc, char *argv[]) {
         firstTask(&teams, in, aux, out);
     //------------------------------------TASK 2-------------------------------------
     if (check[1] == '1')
-        secondTask(&teams, aux, out, nrEchipe, argv);
+        secondTask(&teams, aux, &out, nrEchipe, argv);
     //------------------------------------TASK 3-------------------------------------
     if (check[2] == '1')
         thirdTask(aux, &teams, out, &firstEight);
     if(check[3] == '1')
         fourthTask(firstEight, out);
+//    displayTeam(teams->teamHead);
     freeMemory(&teams, check, &firstEight);      //eliberare de memorie
     closeFiles(&checker, &in ,&out);        //inchidere fisiere
     return 0;

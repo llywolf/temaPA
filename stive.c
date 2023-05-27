@@ -66,3 +66,12 @@ void updateWinners(STACK* winners, TEAM* finalWinner, TEAMLIST** teams, QUEUE* q
         enQueue(queue, &winner, &nextWinner);
     }
 }
+
+void deleteStack(STACK** top){
+    STACK* temp;
+    while((*top) != NULL){
+        temp = *top;
+        *top = (*top)->next;
+        free(temp);
+    }
+}

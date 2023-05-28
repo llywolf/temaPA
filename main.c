@@ -121,17 +121,14 @@ void fifthTask(BST* root, FILE* out, AVL** rootAvl){
 
 void freeMemory(TEAMLIST** teams, char* check, TEAMLIST** firstEight, BST* root, AVL* rootAvl){
     deleteTeams(&(*teams)->teamHead);
-    printf("penis %c\n",check[4]);
     if(check[3] == '0' && check[4] == '0')      //altfel se elibereaza aceeasi memorie de 2 ori
         deleteTeams(&(*firstEight)->teamHead);
     free(*teams);
     if(check[3] == '1' && check[4] == '0') {
-        printf("andrei");
         deleteTree(root);
         deleteTeams(&(*firstEight)->teamHead);
     }
     if(check[4] == '1') {
-        printf("bogdan");
         deleteTree(root);
         deleteAVL(rootAvl);
         deleteTeams(&(*firstEight)->teamHead);

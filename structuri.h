@@ -49,4 +49,10 @@ typedef struct Bst{
     struct Bst *left, *right;
 }BST;
 
+typedef struct Avl{
+    int height;
+    TEAM* team;
+    struct Avl *left, *right;
+}AVL;
+
 #endif

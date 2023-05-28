@@ -76,12 +76,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/mnt/c/Users/carag/CLionProjects/tema1PA/bst.c">
-			<Option target="tema1PA"/>
-		</Unit>
-		<Unit filename="/mnt/c/Users/carag/CLionProjects/tema1PA/bst.h">
-			<Option target="tema1PA"/>
-		</Unit>
 		<Unit filename="/mnt/c/Users/carag/CLionProjects/tema1PA/cozi.c">
 			<Option target="tema1PA"/>
 		</Unit>
@@ -104,6 +98,12 @@
 			<Option target="tema1PA"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/carag/CLionProjects/tema1PA/structuri.h">
+			<Option target="tema1PA"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/carag/CLionProjects/tema1PA/tree.c">
+			<Option target="tema1PA"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/carag/CLionProjects/tema1PA/tree.h">
 			<Option target="tema1PA"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/carag/CLionProjects/tema1PA/CMakeLists.txt">

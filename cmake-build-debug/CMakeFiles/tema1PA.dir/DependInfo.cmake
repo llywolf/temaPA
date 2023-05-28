@@ -8,11 +8,11 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/mnt/c/Users/carag/CLionProjects/tema1PA/bst.c" "CMakeFiles/tema1PA.dir/bst.c.o" "gcc" "CMakeFiles/tema1PA.dir/bst.c.o.d"
   "/mnt/c/Users/carag/CLionProjects/tema1PA/cozi.c" "CMakeFiles/tema1PA.dir/cozi.c.o" "gcc" "CMakeFiles/tema1PA.dir/cozi.c.o.d"
   "/mnt/c/Users/carag/CLionProjects/tema1PA/liste.c" "CMakeFiles/tema1PA.dir/liste.c.o" "gcc" "CMakeFiles/tema1PA.dir/liste.c.o.d"
   "/mnt/c/Users/carag/CLionProjects/tema1PA/main.c" "CMakeFiles/tema1PA.dir/main.c.o" "gcc" "CMakeFiles/tema1PA.dir/main.c.o.d"
   "/mnt/c/Users/carag/CLionProjects/tema1PA/stive.c" "CMakeFiles/tema1PA.dir/stive.c.o" "gcc" "CMakeFiles/tema1PA.dir/stive.c.o.d"
+  "/mnt/c/Users/carag/CLionProjects/tema1PA/tree.c" "CMakeFiles/tema1PA.dir/tree.c.o" "gcc" "CMakeFiles/tema1PA.dir/tree.c.o.d"
   )
 
 # Targets to which this target links.

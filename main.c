@@ -2,7 +2,7 @@
 #include "liste.h"
 #include "stive.h"
 #include "cozi.h"
-#include "bst.h"
+#include "tree.h"
 
 void openFiles(FILE** checker, FILE** out, FILE** in, char* argv[]){
     *checker = fopen(/*c.in*/argv[1], "rt");
@@ -69,6 +69,8 @@ void thirdTask(TEAM* aux, TEAMLIST** teams, FILE* out, TEAMLIST** firstEight){
             queue = createQueue();
             while (aux != NULL) {
                 enQueue(queue, &aux, &aux->next);
+                if(strcmp(aux->name, "TEAM USA") == 0 && strcmp(aux->next->name,"TANGERINES") == 0)
+                    printf("\niuhuuuuu %f %f\n", aux->points, aux->next->points);
                 aux = aux->next->next;
             }
             onetime=0;
@@ -95,7 +97,7 @@ void thirdTask(TEAM* aux, TEAMLIST** teams, FILE* out, TEAMLIST** firstEight){
     }
 }
 
-void fourthTask(TEAMLIST* firstEight, FILE* out){
+BST* fourthTask(TEAMLIST* firstEight, FILE* out){
     TEAM* aux = firstEight->teamHead;
     BST *root = initTree(&root, aux), *rootCopy = root;
     aux = aux->next;
@@ -105,17 +107,34 @@ void fourthTask(TEAMLIST* firstEight, FILE* out){
     }
     fprintf(out, "\nTOP 8 TEAMS:");
     printDescendingOrder(rootCopy, out);
-    deleteTree(root);
-    root = NULL;
+    return root;
 }
 
-void freeMemory(TEAMLIST** teams, char* check, TEAMLIST** firstEight){
+AVL* fifthTask(BST* root, FILE* out){
+    AVL* rootAvl = NULL;
+    BST* bstCopy = root;
+    copyToAVL(&rootAvl, bstCopy);
+    AVL* avlCopy = rootAvl;
+    fprintf(out, "\n\nTHE LEVEL 2 TEAMS ARE: ");
+    printCurrentLevel(avlCopy, 2, out);
+    return rootAvl;
+}
+
+void freeMemory(TEAMLIST** teams, char* check, TEAMLIST** firstEight, BST** root, AVL** rootAvl){
     deleteTeams(&(*teams)->teamHead);
     if(check[3] == 0 && check[4] == 0)      //altfel se elibereaza aceeasi memorie de 2 ori
         deleteTeams(&(*firstEight)->teamHead);
     free(*teams);
-    free(*firstEight);
+    if(check[3] == 1 && check[4] == 0) {
+        deleteTree(*root);
+        deleteTeams(&(*firstEight)->teamHead);
+    }
+    if(check[4] == 1) {
+        deleteAVL(*rootAvl);
+        deleteTeams(&(*firstEight)->teamHead);
+    }
     free(check);
+    free(*firstEight);
 }
 
 void closeFiles(FILE** checker, FILE** in, FILE** out){
@@ -149,10 +168,14 @@ int main(int argc, char *argv[]) {
     //------------------------------------TASK 3-------------------------------------
     if (check[2] == '1')
         thirdTask(aux, &teams, out, &firstEight);
-    if(check[3] == '1')
-        fourthTask(firstEight, out);
-//    displayTeam(teams->teamHead);
-    freeMemory(&teams, check, &firstEight);      //eliberare de memorie
+    BST* rootBst = NULL;
+    if(check[3] == '1') {
+        rootBst = fourthTask(firstEight, out);
+    }
+    AVL* rootAvl = NULL;
+    if(check[4] == '1')
+        rootAvl = fifthTask(rootBst, out);
+    freeMemory(&teams, check, &firstEight, &rootBst, &rootAvl);      //eliberare de memorie
     closeFiles(&checker, &in ,&out);        //inchidere fisiere
     return 0;
 }

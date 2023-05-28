@@ -129,30 +129,6 @@ tema1PA/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tema1PA.dir/build.make CMakeFiles/tema1PA.dir/build
 .PHONY : tema1PA/fast
 
-bst.o: bst.c.o
-.PHONY : bst.o
-
-# target to build an object file
-bst.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tema1PA.dir/build.make CMakeFiles/tema1PA.dir/bst.c.o
-.PHONY : bst.c.o
-
-bst.i: bst.c.i
-.PHONY : bst.i
-
-# target to preprocess a source file
-bst.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tema1PA.dir/build.make CMakeFiles/tema1PA.dir/bst.c.i
-.PHONY : bst.c.i
-
-bst.s: bst.c.s
-.PHONY : bst.s
-
-# target to generate assembly for a file
-bst.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tema1PA.dir/build.make CMakeFiles/tema1PA.dir/bst.c.s
-.PHONY : bst.c.s
-
 cozi.o: cozi.c.o
 .PHONY : cozi.o
 
@@ -249,6 +225,30 @@ stive.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tema1PA.dir/build.make CMakeFiles/tema1PA.dir/stive.c.s
 .PHONY : stive.c.s
 
+tree.o: tree.c.o
+.PHONY : tree.o
+
+# target to build an object file
+tree.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tema1PA.dir/build.make CMakeFiles/tema1PA.dir/tree.c.o
+.PHONY : tree.c.o
+
+tree.i: tree.c.i
+.PHONY : tree.i
+
+# target to preprocess a source file
+tree.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tema1PA.dir/build.make CMakeFiles/tema1PA.dir/tree.c.i
+.PHONY : tree.c.i
+
+tree.s: tree.c.s
+.PHONY : tree.s
+
+# target to generate assembly for a file
+tree.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tema1PA.dir/build.make CMakeFiles/tema1PA.dir/tree.c.s
+.PHONY : tree.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -258,9 +258,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... tema1PA"
-	@echo "... bst.o"
-	@echo "... bst.i"
-	@echo "... bst.s"
 	@echo "... cozi.o"
 	@echo "... cozi.i"
 	@echo "... cozi.s"
@@ -273,6 +270,9 @@ help:
 	@echo "... stive.o"
 	@echo "... stive.i"
 	@echo "... stive.s"
+	@echo "... tree.o"
+	@echo "... tree.i"
+	@echo "... tree.s"
 .PHONY : help
 
 

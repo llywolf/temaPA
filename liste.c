@@ -267,6 +267,8 @@ PLAYER* copyPlayers(PLAYER** head){
 
 TEAM* recordFirstEight(TEAMLIST** head){
     TEAM* firstEight = NULL;
+    if(*head == NULL)
+        printf("teaca");
     TEAM* auxHead = (*head)->teamHead;
     char* name = NULL;
     while(auxHead != NULL) {
@@ -304,6 +306,5 @@ char *strdup(const char *c)
 }
 
 void buildLeaderBoard(TEAMLIST** firstEight, TEAMLIST** teams){
-        (*firstEight)->teamHead = recordFirstEight(teams);
-
+    (*firstEight)->teamHead = recordFirstEight(teams);
 }

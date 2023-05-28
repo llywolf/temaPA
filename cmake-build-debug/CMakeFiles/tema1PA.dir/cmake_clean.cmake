@@ -1,6 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/tema1PA.dir/bst.c.o"
-  "CMakeFiles/tema1PA.dir/bst.c.o.d"
   "CMakeFiles/tema1PA.dir/cozi.c.o"
   "CMakeFiles/tema1PA.dir/cozi.c.o.d"
   "CMakeFiles/tema1PA.dir/liste.c.o"
@@ -9,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/tema1PA.dir/main.c.o.d"
   "CMakeFiles/tema1PA.dir/stive.c.o"
   "CMakeFiles/tema1PA.dir/stive.c.o.d"
+  "CMakeFiles/tema1PA.dir/tree.c.o"
+  "CMakeFiles/tema1PA.dir/tree.c.o.d"
   "tema1PA"
   "tema1PA.pdb"
 )

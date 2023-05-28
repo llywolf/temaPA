@@ -110,27 +110,30 @@ BST* fourthTask(TEAMLIST* firstEight, FILE* out){
     return root;
 }
 
-AVL* fifthTask(BST* root, FILE* out){
-    AVL* rootAvl = NULL;
+void fifthTask(BST* root, FILE* out, AVL** rootAvl){
+
     BST* bstCopy = root;
-    copyToAVL(&rootAvl, bstCopy);
-    AVL* avlCopy = rootAvl;
+    copyToAVL(rootAvl, bstCopy);
     fprintf(out, "\n\nTHE LEVEL 2 TEAMS ARE: ");
-    printCurrentLevel(avlCopy, 2, out);
-    return rootAvl;
+    if(*rootAvl == NULL)printf("denis");
+    printCurrentLevel(*rootAvl, 2, out);
 }
 
-void freeMemory(TEAMLIST** teams, char* check, TEAMLIST** firstEight, BST** root, AVL** rootAvl){
+void freeMemory(TEAMLIST** teams, char* check, TEAMLIST** firstEight, BST* root, AVL* rootAvl){
     deleteTeams(&(*teams)->teamHead);
-    if(check[3] == 0 && check[4] == 0)      //altfel se elibereaza aceeasi memorie de 2 ori
+    printf("penis %c\n",check[4]);
+    if(check[3] == '0' && check[4] == '0')      //altfel se elibereaza aceeasi memorie de 2 ori
         deleteTeams(&(*firstEight)->teamHead);
     free(*teams);
-    if(check[3] == 1 && check[4] == 0) {
-        deleteTree(*root);
+    if(check[3] == '1' && check[4] == '0') {
+        printf("andrei");
+        deleteTree(root);
         deleteTeams(&(*firstEight)->teamHead);
     }
-    if(check[4] == 1) {
-        deleteAVL(*rootAvl);
+    if(check[4] == '1') {
+        printf("bogdan");
+        deleteTree(root);
+        deleteAVL(rootAvl);
         deleteTeams(&(*firstEight)->teamHead);
     }
     free(check);
@@ -174,8 +177,8 @@ int main(int argc, char *argv[]) {
     }
     AVL* rootAvl = NULL;
     if(check[4] == '1')
-        rootAvl = fifthTask(rootBst, out);
-    freeMemory(&teams, check, &firstEight, &rootBst, &rootAvl);      //eliberare de memorie
+        fifthTask(rootBst, out, &rootAvl);
+    freeMemory(&teams, check, &firstEight, rootBst, rootAvl);      //eliberare de memorie
     closeFiles(&checker, &in ,&out);        //inchidere fisiere
     return 0;
 }

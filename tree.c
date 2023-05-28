@@ -44,8 +44,9 @@ void deleteTree(BST* node){
 
 void deleteAVL(AVL* node){
     if (node == NULL) return;
-    deleteAVL(node->left);
     deleteAVL(node->right);
+    deleteAVL(node->left);
+
     free(node);
 }
 

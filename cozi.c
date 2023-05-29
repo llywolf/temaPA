@@ -38,12 +38,12 @@ void deQueue (QUEUE *q, TEAM** win, TEAM** lose){
         *win = aux->firstTeam;
         *lose = aux->secondTeam;
     }
-    free(aux);
+    free(aux);      //free only queue node, not the teams
 }
 
 void deleteTeam(TEAM** team){
     if(team == NULL){
-        printf("\n eroare memorie echipa");
+        printf("\n Memory error in deleteTeam()");
         exit(1);
     }
     TEAM* copy = *team;

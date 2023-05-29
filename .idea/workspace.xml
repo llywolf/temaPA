@@ -21,7 +21,18 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c7027b4-c0e9-4515-a395-3b69005ba5e0" name="Changes" comment="" />
+    <list default="true" id="8c7027b4-c0e9-4515-a395-3b69005ba5e0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozi.c" beforeDir="false" afterPath="$PROJECT_DIR$/cozi.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lanParty" beforeDir="false" afterPath="$PROJECT_DIR$/lanParty" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liste.c" beforeDir="false" afterPath="$PROJECT_DIR$/liste.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/r.out" beforeDir="false" afterPath="$PROJECT_DIR$/r.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stive.c" beforeDir="false" afterPath="$PROJECT_DIR$/stive.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/structuri.h" beforeDir="false" afterPath="$PROJECT_DIR$/structuri.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree.c" beforeDir="false" afterPath="$PROJECT_DIR$/tree.c" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -119,7 +130,9 @@
       <workItem from="1685121570075" duration="12597000" />
       <workItem from="1685211152309" duration="10925000" />
       <workItem from="1685273069571" duration="19133000" />
-      <workItem from="1685297758691" duration="6000" />
+      <workItem from="1685297758691" duration="559000" />
+      <workItem from="1685300048486" duration="296000" />
+      <workItem from="1685361180051" duration="4258000" />
     </task>
     <servers />
   </component>

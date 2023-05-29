@@ -29,7 +29,7 @@ typedef struct TeamList{
     TEAM* teamHead;
 }TEAMLIST;
 
-typedef struct Match{
+typedef struct Match{       //teams in the match are pointers to the teamlist, not duplicated data
     TEAM* firstTeam;
     TEAM* secondTeam;
     struct Match* next;
@@ -39,17 +39,17 @@ typedef struct Q{
     MATCH *rear, *front;
 }QUEUE;
 
-typedef struct Stack{
+typedef struct Stack{       //teams in the stacks are also pointers and not duplicated
     TEAM* team;
     struct Stack* next;
 }STACK;
 
-typedef struct Bst{
+typedef struct Bst{     //the BST teams are pointers to the leaderboard teams list
     TEAM* team;
     struct Bst *left, *right;
 }BST;
 
-typedef struct Avl{
+typedef struct Avl{     //the AVL duplicates the teams from the BST
     int height;
     TEAM* team;
     struct Avl *left, *right;

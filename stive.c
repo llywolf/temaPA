@@ -46,6 +46,7 @@ void deleteLosers(STACK *losers, TEAM** teams){
 void updateWinners(STACK* winners, TEAM* finalWinner, TEAMLIST** teams, QUEUE* queue, FILE *out){
     while(winners != NULL){
         TEAM *winner = pop(&winners);
+        //if the stack is null before nextWinner is popped then the final winner is found
         if (winners == NULL) {
             finalWinner = winner;
             scoreUpdate(&finalWinner);

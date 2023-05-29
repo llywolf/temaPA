@@ -18,7 +18,7 @@ BST* newNode(TEAM* data){
 }
 
 BST* insert(BST* node, TEAM* data){
-    if(node == NULL)        //dupa ce coboara de tot creeaza nod
+    if(node == NULL)
         return newNode(data);
     if((data->points == node->team->points && strcmp(data->name, node->team->name) < 0) || (data->points < node->team->points))
         node->left = insert(node->left, data);

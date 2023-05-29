@@ -49,7 +49,7 @@ void displayPlayers(PLAYER *head) {
 
 void deleteTeams(TEAM** team){
     if(team == NULL){
-        printf("\n eroare memorie echipa");
+        printf("\n Memory error in deleteTeams()");
         exit(1);
     }
     TEAM* copy = *team;
@@ -70,16 +70,14 @@ void deleteTeams(TEAM** team){
 }
 
 int alocName(char** name, int newLen, int num, char buffer[100]){
-    if (num > 9) {      // difera dimensiunea in functie nr de cifre al lui num
+    if (num > 9) {      //length differs if the num is > 9
         *name = malloc((newLen - 1) * sizeof(char));
         memmove(*name, buffer, sizeof(char) * (newLen - 2));
         (*name)[newLen - 2] = '\0';
-        //newLen = strlen(name);
     } else {
         *name = malloc((newLen) * sizeof(char));
         memmove(*name, buffer, sizeof(char) * (newLen - 1));
         (*name)[newLen - 1] = '\0';
-        //newLen = strlen(name);
     }
     return strlen(*name);
 }
@@ -92,7 +90,7 @@ void separateName(int newLen, char *name, char** fName, char** sName){
     *fName = malloc(sizeof(char) * (j + 1));
     memcpy(*fName, name, sizeof(char) * j);
     (*fName)[j] = '\0';
-    *sName = malloc(sizeof(char) * (newLen - j + 2));        // + 1 pt '\0'
+    *sName = malloc(sizeof(char) * (newLen - j + 2));        // + 1 for '\0'
     memcpy(*sName, name + j + 1, newLen - j + 1);
     (*sName)[newLen - j + 1] = '\0';
 }
@@ -125,19 +123,19 @@ TEAM *initTeams(FILE *in) {
     TEAM* team = NULL;
     PLAYER* players = NULL;
     char buffer[100], *endPtr = NULL, *name = NULL;
-    int len, num;       //initial num e nr membrii echipa
+    int len, num;       //first num is the team number
     while (!feof(in)) {
         fgets(buffer, sizeof(buffer), in);
         if (strcmp(buffer, "\r\n") == 0)
             continue;
-        if (buffer[0] <= '9' && buffer[0] >= '1') {      //inregistrarea echipei
+        if (buffer[0] <= '9' && buffer[0] >= '1') {      //register team
             num = strtol(buffer, &endPtr, 10);
-            len = strlen(endPtr) - 3;     //endPtr o sa fie numele echipei(din cauza lui strtol) | - 3 pt spatiu si \n\r
-            char* teamName = malloc((len + 1) * sizeof(char));        // len+1 pt '\0'
-            memmove(teamName, endPtr + 1, len * sizeof(char));      // endPtr ramane la spatiu deci mai trebuie + 1
-            teamName[len] = '\0';       // in loc de \n\r
+            len = strlen(endPtr) - 3;     //endPtr is team name(because of strtol) | - 3 for the space and \n\r
+            char* teamName = malloc((len + 1) * sizeof(char));        // len+1 for '\0'
+            memmove(teamName, endPtr + 1, len * sizeof(char));      // endPtr points to the space before the name so we need + 1
+            teamName[len] = '\0';       //replace \n\r
             int nrMembrii = num;
-            for(int i = 0; i < nrMembrii; i++){     //pentru membrii
+            for(int i = 0; i < nrMembrii; i++){     //registering team members
                 fgets(buffer, sizeof(buffer), in);
                 len = strlen(buffer);   //buffer[len-1] = '\n'
                 buffer[len - 1] = '\0';
@@ -147,12 +145,12 @@ TEAM *initTeams(FILE *in) {
                         num = num * 10 + buffer[j] - '0';
                     }
                 }
-                int newLen = len - 2; // pt nume
+                int newLen = len - 2; //name len
                 newLen = alocName(&name, newLen, num, buffer);
                 char *fName = NULL, *sName = NULL;
                 separateName(newLen, name, &fName, &sName);
                 addPlayer(&players, fName, sName, num);
-                free3strings(name, fName, sName);       // pt functie cu max 40 de linii de cod
+                free3strings(name, fName, sName);
             }
             if(teamName[strlen(teamName) - 1] == ' ')
                 teamName[strlen(teamName) - 1] = '\0';
@@ -166,7 +164,7 @@ TEAM *initTeams(FILE *in) {
 
 void getScore(TEAM** team){
     if(team == NULL){
-        printf("eroare memorie echipa(calculeazaScor)");
+        printf("Memory error in getScore()");
         exit(1);
     }
     TEAM* copy = *team;
@@ -197,13 +195,13 @@ void deletePlayers(TEAM** team){
 
 void deleteTeamSurplus(TEAM** team, int nrEchipe, int nrMaxEchipe){
     if(team == NULL){
-        printf("\n eroare memorie echipa");
+        printf("\nTeam memory error");
         exit(1);
     }
     TEAM* copy = *team;
     TEAM *prev = copy;
     while(nrEchipe > nrMaxEchipe){
-        float min = copy->points;     //calculez scorul minimul
+        float min = copy->points;     //find lowest score
         while (copy != NULL) {
             if (min > copy->points) {
                 min = copy->points;
@@ -211,19 +209,19 @@ void deleteTeamSurplus(TEAM** team, int nrEchipe, int nrMaxEchipe){
             copy = copy->next;
         }
         copy = *team;
-        if (copy != NULL && min == copy->points) {        //cazul pt scor minim la capul listei
+        if (copy != NULL && min == copy->points) {        //if the list head is the lowest
             *team = (*team)->next;
             deleteTeam(&copy);
             copy = *team;
             nrEchipe--;
         }
         else {
-            while (copy != NULL && min != copy->points) {     //cand gasesc echipe cu scor minim le sterg din lista
+            while (copy != NULL && min != copy->points) {     //teams with the lowest score are deleted
                 prev = copy;
                 copy = copy->next;
             }
             if (copy == NULL) {
-                printf("\nMinimul nu a fost gasit");
+                printf("\nLowest score not found");
                 return;
             }
             prev->next = copy->next;
@@ -268,10 +266,10 @@ PLAYER* copyPlayers(PLAYER** head){
 TEAM* recordFirstEight(TEAMLIST** head){
     TEAM* firstEight = NULL;
     if(*head == NULL)
-        printf("teaca");
+        printf("Memory error in recordFirstEight()");
     TEAM* auxHead = (*head)->teamHead;
     char* name = NULL;
-    while(auxHead != NULL) {
+    while(auxHead != NULL) {        //copy the first eight teams in a new list
         PLAYER* copy = copyPlayers(&auxHead->members->playerHead);
         name = strdup(auxHead->name);
         addTeam(&firstEight, name, auxHead->nrMembers, copy);
@@ -282,7 +280,7 @@ TEAM* recordFirstEight(TEAMLIST** head){
     return firstEight;
 }
 
-void updateFirstEight(TEAMLIST** leaderBoardHead, TEAMLIST** head){
+void updateFirstEight(TEAMLIST** leaderBoardHead, TEAMLIST** head){     //updates the scores in the leaderboard, the tests don't have the updated scores though
     TEAM* boardCopy = (*leaderBoardHead)->teamHead, *headCopy = NULL;
     while(boardCopy != NULL) {
         headCopy = (*head)->teamHead;
@@ -297,8 +295,7 @@ void updateFirstEight(TEAMLIST** leaderBoardHead, TEAMLIST** head){
     }
 }
 
-char *strdup(const char *c)
-{
+char *strdup(const char *c){
     char *dup = malloc(strlen(c) + 1);
     if (dup != NULL)
         strcpy(dup, c);
